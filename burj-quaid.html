@@ -59,18 +59,18 @@
     <div class="phero__approvals" id="pApprovals"></div>
     <div class="hero__actions reveal-line">
       <a class="btn" href="#interest" data-cursor="Register">Register your interest<i class="btn__arrow">→</i></a>
-      <a class="btn btn--ghost" href="#gallery" data-cursor="Look">View the tower</a>
+      <a class="btn btn--ghost" href="#amenities" data-cursor="Look">Explore the project</a>
     </div>
     <p class="phero__market reveal-line" id="pMarket"></p>
   </div>
 </section>
 
-<!-- ===== TRAVEL ===== -->
-<section class="section travel" id="location">
+<!-- ===== LOCATION ===== -->
+<section class="section travel" id="location" data-needs="#locTitle">
   <div class="wrap">
     <header class="sec-head">
-      <p class="tag reveal">Location Features</p>
-      <h2 class="h2 split" id="travelTitle"></h2>
+      <p class="tag reveal">Location</p>
+      <h2 class="h2 split" id="travelTitle">Where it stands.</h2>
     </header>
     <div class="travel__grid" id="travelGrid"></div>
     <div class="locnote reveal">
@@ -80,31 +80,67 @@
   </div>
 </section>
 
+<!-- ===== RESIDENTIAL ===== -->
+<section class="section units" id="units" data-needs="#unitList">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Residential apartments</p>
+      <h2 class="h2 split" id="unitsTitle">The residences.</h2>
+      <p class="lede reveal" id="unitsNote"></p>
+    </header>
+    <div class="ugrid" id="unitList"></div>
+  </div>
+</section>
+
+<!-- ===== COMMERCIAL ===== -->
+<section class="section units units--alt" id="commercial" data-needs="#commercialList">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Commercial units</p>
+      <h2 class="h2 split" id="commercialTitle">Retail and offices.</h2>
+    </header>
+    <div class="ugrid" id="commercialList"></div>
+  </div>
+</section>
+
 <!-- ===== GALLERIES ===== -->
-<section class="section pgallery" id="gallery">
+<section class="section pgallery" id="gallery" data-needs="#galleryHost">
   <div class="wrap" id="galleryHost"></div>
 </section>
 
-<!-- ===== LANDMARKS ===== -->
-<section class="section landmarks" id="features">
+<!-- ===== LANDMARKS / FEATURES ===== -->
+<section class="section landmarks" id="features" data-needs="#landmarkGrid">
   <div class="wrap">
     <header class="sec-head">
-      <p class="tag reveal">Features &amp; nearby landmarks</p>
-      <h2 class="h2 split">Built into DHA City.</h2>
+      <p class="tag reveal" id="landmarksTag">Features &amp; nearby landmarks</p>
+      <h2 class="h2 split" id="landmarksTitle">What surrounds it.</h2>
     </header>
     <div class="lgrid" id="landmarkGrid"></div>
   </div>
 </section>
 
 <!-- ===== AMENITIES ===== -->
-<section class="section amenities" id="amenities">
+<section class="section amenities" id="amenities" data-needs="#amenList">
   <div class="wrap amen__grid">
     <div>
-      <p class="tag reveal">Modern features</p>
+      <p class="tag reveal">Amenities</p>
       <h2 class="h2 split">Everything, in the building.</h2>
-      <p class="lede reveal">Sixteen amenities planned across the tower — from the double-height lobby at arrival to the sky lounge at the crown.</p>
+      <p class="lede reveal">The shared spaces and services planned through the development.</p>
     </div>
     <ul class="amen__list" id="amenList"></ul>
+  </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section class="section booking" id="booking" data-needs="#bookingSteps">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Booking</p>
+      <h2 class="h2 split" id="bookingTitle">How to book.</h2>
+      <p class="lede reveal" id="bookingNote"></p>
+    </header>
+    <ol class="bsteps" id="bookingSteps"></ol>
+    <ul class="bcontacts" id="bookingContacts"></ul>
   </div>
 </section>
 

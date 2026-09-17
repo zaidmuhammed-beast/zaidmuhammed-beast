@@ -34,14 +34,19 @@ The visual language is the dark architectural one from the first build — near-
 surfaces, a single gold accent, Syne over Inter — carrying the content and structure
 taken from the company's live pages.
 
-**Project pages.** `burj-quaid.html` and `pearl-one-capital.html` are detail
-pages driven by `projectPages` in `data.js` — hero specifications, approvals,
-travel times, residential and commercial unit mixes, the booking process,
-galleries, nearby landmarks and amenities. Every section renders only if the
-project defines it, so pages can differ: Burj Quaid carries travel times and
-landmarks, Pearl One Capital carries the unit tables and booking steps. Adding
-another is a new entry in that object plus an HTML shell with a different
-`data-project` value; `src/js/project.js` renders the rest.
+**Project pages.** Seven detail pages — Burj Quaid, Pearl One Capital, Pearl One
+Premium, Pearl One Tower, Pearl One Royal and both ABS Mall & Residency blocks —
+all generated from one shell and driven by `projectPages` in `data.js`.
+
+Each page declares its sections with `data-needs="<selector>"`; `src/js/project.js`
+renders whatever the project defines and removes any section left empty, so the
+pages differ without any per-page code. Burj Quaid gets travel times and nearby
+landmarks, Pearl One Capital gets unit tables and a booking process, Mall &
+Residency 2 gets investment benefits and a two-step booking — same renderer.
+
+Adding another project is one entry in `projectPages` plus a copy of the shell
+with a new `data-project` value; homepage cards link through automatically
+whenever a matching entry exists.
 
 ## What's under it
 

@@ -103,8 +103,8 @@ function renderUnits() {
   const rows = (host, items) => {
     if (!host || !items) return;
     items.forEach((u) => host.append(el('article', 'unit reveal', `
-      <div class="unit__head"><h3>${u.type}</h3><b>${u.size}</b></div>
-      <p>${u.note}</p>`)));
+      <div class="unit__head"><h3>${u.type}</h3>${u.size ? `<b>${u.size}</b>` : ''}</div>
+      ${u.note ? `<p>${u.note}</p>` : ''}`)));
   };
   rows($('#unitList'), page.units);
   rows($('#commercialList'), page.commercial);
@@ -149,6 +149,30 @@ function renderGalleries() {
 }
 
 /* ---------------- landmarks + amenities ---------------- */
+function setText(sel, value) {
+  const n = $(sel);
+  if (n && value) n.textContent = value;
+}
+
+function renderHeadings() {
+  setText('#unitsTitle', page.unitsTitle);
+  setText('#unitsNote', page.unitsNote);
+  setText('#commercialTitle', page.commercialTitle);
+  setText('#landmarksTag', page.landmarksTag);
+  setText('#landmarksTitle', page.landmarksTitle);
+  setText('#bookingTitle', page.booking?.title);
+  setText('#travelTitle', page.travel?.title);
+}
+
+/* A project renders only the sections it has data for — drop the rest so no
+ * empty heading is left standing. */
+function pruneEmptySections() {
+  document.querySelectorAll('main section[data-needs]').forEach((sec) => {
+    const host = sec.querySelector(sec.dataset.needs);
+    if (!host || (!host.children.length && !host.textContent.trim())) sec.remove();
+  });
+}
+
 function renderFeatures() {
   const grid = $('#landmarkGrid');
   if (grid && page.landmarks) {
@@ -198,6 +222,9 @@ function boot() {
   renderBooking();
   renderGalleries();
   renderFeatures();
+  renderHeadings();
+
+  pruneEmptySections();
 
   initNav();
   initReveals();

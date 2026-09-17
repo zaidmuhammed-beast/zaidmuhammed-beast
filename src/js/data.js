@@ -309,3 +309,198 @@ projectPages['pearl-one-capital'] = {
     { title: 'Floor plans', sub: 'One bed · two bed · three bed · penthouse', tiles: 4 }
   ]
 };
+
+/* --- Bahria Town Lahore portfolio ------------------------------------ */
+projectPages['pearl-one-premium'] = {
+  id: 'pearl-one-premium', name: 'Pearl One Premium', seed: 7, accent: '#d9a441',
+  eyebrow: 'A modern landmark in Bahria Town',
+  tagline: 'Ultra-luxury, twenty-five storeys up',
+  standfirst: 'Residences, penthouses and a shopping mall on one of Bahria Town Lahore’s most central plots.',
+  specs: [['G+25', 'Storeys'], ['300+', 'Residential units'], ['Takbeer Block', 'Bahria Town']],
+  location: {
+    title: 'Prime location in Bahria Town Lahore',
+    text: 'Pearl One Premium stands in Takbeer Block 1, on the site where the old Food Court Cinema once stood — a central address with everything a full lifestyle needs around it.'
+  },
+  unitsTitle: 'Five ways to live here.',
+  unitsNote: 'More than three hundred residences, from one-bed apartments to three-bedroom penthouses on the upper floors.',
+  units: [
+    { type: '1-bed apartment' }, { type: '2-bed apartment' },
+    { type: '3-bed luxury apartment' }, { type: '2-bed penthouse' }, { type: '3-bed penthouse' }
+  ],
+  commercialTitle: 'Retail across three levels.',
+  commercial: [
+    { type: 'Ground floor outlets', note: 'The primary retail frontage of the mall.' },
+    { type: 'First floor outlets', note: 'A second run of retail above the ground level.' },
+    { type: 'Second floor upwards', note: 'Further commercial space on the upper mall floors.' }
+  ],
+  landmarksTag: 'Building features', landmarksTitle: 'How the building works.',
+  landmarks: [
+    ['Ground + 25 storeys', 'The full height of the tower above the mall levels.'],
+    ['Dedicated basement parking', 'Reserved for residents.'],
+    ['Separate entrances', 'Mall visitors and residents arrive apart, for privacy.'],
+    ['1, 2 and 3-bed apartments', 'Spacious plans through the residential floors.'],
+    ['Luxury penthouses', 'Upper floors, with the long views.'],
+    ['Shopping mall', 'A state-of-the-art mall on the lower floors.']
+  ],
+  amenities: [
+    'Infinity swimming pool', 'Children’s play areas', 'Landscaped parks', 'CCTV surveillance',
+    'Indoor gym', 'Terrace', 'BBQ & dining area', 'Courtyard', 'Secure basement parking',
+    '24/7 security', 'High-speed elevators', 'Backup power system', 'Children’s play zone',
+    'Rooftop leisure area', 'Landscaped surroundings'
+  ],
+  galleries: [{ title: 'The building', sub: 'Exterior and mall levels', tiles: 3 }]
+};
+
+projectPages['pearl-one-tower'] = {
+  id: 'pearl-one-tower', name: 'Pearl One Tower', seed: 13, accent: '#d9a441',
+  eyebrow: 'Delivered · immediate possession',
+  tagline: 'At the heart of Bahria Town',
+  standfirst: 'The project that set the standard — completed, handed over, and now home to the ABS head office.',
+  specs: [['G+7', 'Storeys'], ['150+', 'Residential units'], ['Delivered', 'Possession ready']],
+  approvals: ['Immediate possession'],
+  location: {
+    title: 'Strategically located at the heart of Bahria Town',
+    text: 'One of Lahore’s most sought-after residential locations, with direct access to the main roads and the commercial and lifestyle destinations around it.'
+  },
+  landmarksTag: 'Location features', landmarksTitle: 'Excellent connectivity.',
+  landmarks: [
+    ['Major roads', 'Prime location with easy access to the main road network.'],
+    ['Commercial destinations', 'Close to the commercial and lifestyle hubs of Bahria Town.'],
+    ['Across Lahore', 'Well connected to the key areas of the city.'],
+    ['Peaceful surroundings', 'Premium residential facilities in a quiet setting.']
+  ],
+  unitsTitle: 'Three apartment types.',
+  unitsNote: 'Over one hundred and fifty residences across the tower.',
+  units: [
+    { type: '1-bed apartment' }, { type: '2-bed apartment' }, { type: '3-bed luxury apartment' }
+  ],
+  amenities: [
+    '24/7 room service & assistance', 'Private pools (select units)', 'Double-height lobby',
+    'High-speed elevators', 'Smart automated complex', 'Executive lounge', 'Library',
+    'Tennis court', 'Sauna & wellness spa', 'Bowling alley', 'Fitness & gym centre',
+    'Rooftop sky lounge', 'Landscaped green courtyards', 'Children’s play area',
+    'Co-working spaces', 'Smart home integration'
+  ],
+  galleries: [
+    { title: 'Exterior views', sub: 'The tower in Bahria Town', tiles: 3 },
+    { title: 'Amenities', sub: 'Shared spaces through the building', tiles: 3 },
+    { title: 'Penthouse interiors', sub: 'The upper-floor residences', tiles: 2 }
+  ]
+};
+
+projectPages['mall-residency-1'] = {
+  id: 'mall-residency-1', name: 'ABS Mall & Residency 1', seed: 12, accent: '#d9a441',
+  eyebrow: 'Possession ready',
+  tagline: 'Premier living and shopping',
+  standfirst: 'Homes above a working mall at the Ring Road interchange of Bahria Town Lahore.',
+  specs: [['G+9', 'Storeys'], ['140+', 'Residential units'], ['Ring Road', 'Interchange']],
+  approvals: ['Possession ready'],
+  location: {
+    title: 'Prime location in Bahria Town Lahore',
+    text: 'Opposite ABS Mall & Residency 2, near the Ring Road interchange — easy access to the main roads and the destinations around them.'
+  },
+  unitsTitle: 'Four ways to live here.',
+  unitsNote: 'More than one hundred and forty residences above the mall floors.',
+  units: [
+    { type: '1-bed apartment' }, { type: '2-bed apartment' },
+    { type: '3-bed apartment' }, { type: '2-bed penthouse' }
+  ],
+  commercialTitle: 'The shopping mall.',
+  commercial: [
+    { type: 'Ground floor mall retail', size: '170 sq ft', note: 'Modern outlets on the primary retail level.' },
+    { type: 'First floor retail & offices', size: '150 sq ft', note: 'Suited to corporate and service businesses.' },
+    { type: 'Lower ground retail', size: '150 sq ft', note: 'A further run of outlets below the mall floor.' }
+  ],
+  amenities: [
+    'Infinity swimming pool', 'Children’s play areas', 'Landscaped parks', 'CCTV surveillance',
+    'Indoor gym', 'Terrace', 'BBQ & dining area', 'Courtyard', 'Basement car parking',
+    '24/7 security', 'Backup power system', 'Rooftop leisure area', 'Landscaped surroundings'
+  ],
+  galleries: [{ title: 'Mall & residences', sub: 'Exterior and retail levels', tiles: 3 }]
+};
+
+projectPages['mall-residency-2'] = {
+  id: 'mall-residency-2', name: 'ABS Mall & Residency 2', seed: 11, accent: '#d9a441',
+  eyebrow: 'A blend of shopping and modern living',
+  tagline: 'Premium apartments in Bahria Town Lahore',
+  standfirst: 'Apartments, penthouses and retail at the Ring Road interchange — built for families and investors alike.',
+  specs: [['G+15', 'Storeys'], ['1–3 bed', 'Apartments'], ['Ring Road', 'Interchange']],
+  location: {
+    title: 'Prime location for premium living',
+    text: 'At the Ring Road interchange of Bahria Town Lahore — one of the city’s most accessible addresses, and one with real room for capital appreciation.'
+  },
+  unitsTitle: 'Layouts for every household.',
+  unitsNote: 'Spacious plans, modern interiors and panoramic views across the development.',
+  units: [
+    { type: '1-bed apartment', note: 'Ideal for singles or couples.' },
+    { type: '2-bed apartment', note: 'A family plan with room to grow.' },
+    { type: '3-bed apartment', note: 'The largest standard residence.' },
+    { type: 'Penthouses', note: 'Upper-floor living with panoramic views.' }
+  ],
+  landmarksTag: 'Investment benefits', landmarksTitle: 'Why investors look here.',
+  landmarks: [
+    ['Rental income', 'Strong potential for rental yield in one of Pakistan’s most desirable markets.'],
+    ['Capital appreciation', 'Significant upside from the interchange location.'],
+    ['Premium lifestyle', 'Built for end-users and tenants alike.']
+  ],
+  amenities: [
+    'Infinity swimming pool', 'Children’s play areas', 'Landscaped parks', 'CCTV surveillance',
+    'Indoor gym', 'Terrace', 'BBQ & dining area', 'Courtyard', 'Basement car parking',
+    'Rooftop garden & leisure area', 'Backup power system', 'Smart home features',
+    'Landscaped spaces'
+  ],
+  booking: {
+    title: 'How to book',
+    note: 'Booking is handled directly by the sales team.',
+    steps: [
+      { title: 'Call the sales team', text: 'Dial 0300 6666 490 to talk through availability and payment plans.' },
+      { title: 'Visit the sales office', text: 'Tour the model apartments and sales office in Bahria Town Lahore.' }
+    ],
+    contacts: [['Sales', '0300 6666 490', 'tel:+923006666490']]
+  },
+  galleries: [{ title: 'Floor plans & layouts', sub: 'Designed around different lifestyles', tiles: 4 }]
+};
+
+projectPages['pearl-one-royal'] = {
+  id: 'pearl-one-royal', name: 'Pearl One Royal', seed: 10, accent: '#d9a441',
+  eyebrow: 'Bahria Orchard Phase 2',
+  tagline: 'Royal living, twenty-three storeys up',
+  standfirst: 'A residential and commercial tower with the schools, hospital and head office of Bahria Town on its doorstep.',
+  specs: [['G+23', 'Storeys'], ['Bahria Orchard', 'Phase 2'], ['Lahore', 'Punjab']],
+  location: {
+    title: 'Strategically located in Bahria Town Lahore',
+    text: 'Seamless connectivity to the schools, healthcare, commercial conveniences and community landmarks of Bahria Town.'
+  },
+  travel: {
+    title: 'Travel connectivity to Pearl One Royal',
+    items: [
+      ['School', 'Bahria International School'],
+      ['Head office', 'Bahria Head Office'],
+      ['Hospital', 'Bahria Hospital'],
+      ['Fuel', 'Petrol pump nearby']
+    ]
+  },
+  landmarksTag: 'Features & nearby landmarks', landmarksTitle: 'Built into Bahria Town.',
+  landmarks: [
+    ['22-lane entrance', 'The widest gateway of any Pakistani housing scheme.'],
+    ['10-lane roads', 'Arterial roads sized for the community they serve.'],
+    ['Latest sewerage system', 'Modern treatment and drainage infrastructure.'],
+    ['Solar parks', 'On-site solar generation within the scheme.'],
+    ['Power plant', 'Dedicated power generation nearby.'],
+    ['Golf course', 'A championship-scale course within the development.'],
+    ['Water park', 'Family recreation close to the tower.'],
+    ['Adventure park', 'Outdoor activity grounds nearby.']
+  ],
+  amenities: [
+    '24/7 room service & assistance', 'Private pools (select units)', 'Double-height lobby',
+    'High-speed elevators', 'Smart automated complex', 'Executive lounge', 'Library',
+    'Tennis court', 'Sauna & wellness spa', 'Bowling alley', 'Fitness & gym centre',
+    'Rooftop sky lounge', 'Landscaped green courtyards', 'Children’s play area',
+    'Co-working spaces', 'Smart home integration'
+  ],
+  galleries: [
+    { title: 'Exterior views', sub: 'The tower on approach', tiles: 3 },
+    { title: 'Apartment interiors', sub: 'Living, dining and bedrooms', tiles: 3 },
+    { title: 'Private residential lobby', sub: 'Arrival and reception levels', tiles: 2 }
+  ]
+};
