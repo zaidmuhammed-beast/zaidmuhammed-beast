@@ -4,7 +4,7 @@ An animated, Three.js-driven site for **ABS Developers**, Pakistan's Shariah-com
 real estate developer. Single static build — no framework, no build step, one runtime
 dependency.
 
-![projects](https://img.shields.io/badge/projects-13-bc3030) ![deps](https://img.shields.io/badge/runtime%20deps-three.js-bc3030) ![build](https://img.shields.io/badge/build%20step-none-bc3030)
+![projects](https://img.shields.io/badge/projects-13-d9a441) ![deps](https://img.shields.io/badge/runtime%20deps-three.js-d9a441) ![build](https://img.shields.io/badge/build%20step-none-d9a441)
 
 ## Run it
 
@@ -29,6 +29,10 @@ All 13 developments are included with their real specifications — Burj Quaid (
 45 storeys), Pearl One Premium, Pearl One Capital, Pearl One Royal, ABS Central,
 ABS Executive, Sialkot Central, ABS Mall & Residency 1–2 and Pearl One Tower — each
 with its status badge (FLAGSHIP / AVAILABLE / POSSESSION READY / DELIVERED).
+
+The visual language is the dark architectural one from the first build — near-black
+surfaces, a single gold accent, Syne over Inter — carrying the content and structure
+taken from the company's live pages.
 
 ## What's under it
 

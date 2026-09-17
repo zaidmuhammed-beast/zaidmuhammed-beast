@@ -136,7 +136,7 @@ function renderVision() {
       <div class="vtile__play"><i></i></div>
       <div class="vtile__body"><b>${v.name}</b><span>${v.sub}</span></div>`;
     grid.append(tile);
-    paintProject(tile.querySelector('canvas'), { seed: v.seed, accent: '#bc3030' });
+    paintProject(tile.querySelector('canvas'), { seed: v.seed, accent: '#d9a441' });
   });
 }
 

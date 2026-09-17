@@ -58,91 +58,91 @@ export const projects = [
     stats: [['941', 'ft Height'], ['82', 'Storeys']],
     city: 'Karachi', location: 'DHA City Karachi',
     note: 'Pakistan’s tallest tower — a supertall landmark rising 941 feet over DHA City Karachi.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 1
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 1
   },
   {
     id: 'abs-executive', name: 'ABS Executive', badge: 'AVAILABLE',
     stats: [['23', 'Storeys']],
     city: 'Lahore', location: 'Opposite DHA Phase 5, Ring Road Interchange',
     note: 'A ground-plus-23 storey address on the Ring Road interchange, facing DHA Phase 5.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 2
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 2
   },
   {
     id: 'abs-central', name: 'ABS Central', badge: 'AVAILABLE',
     stats: [['23', 'Storeys']],
     city: 'Lahore', location: 'Ring Road Interchange, Bahria Town Lahore',
     note: 'Twenty-three storeys of apartments and commercial floors at the Bahria Town interchange.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 3
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 3
   },
   {
     id: 'poc-1', name: 'Pearl One Courtyard 1', badge: 'AVAILABLE',
     stats: [['23', 'Storeys']],
     city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
     note: 'The first tower of the Courtyard trio, on a prime Bahria Town plot.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 4
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 4
   },
   {
     id: 'poc-2', name: 'Pearl One Courtyard 2', badge: 'AVAILABLE',
     stats: [['300+', 'ft Height'], ['45', 'Storeys']],
     city: 'Lahore', location: 'Bahria Town Lahore',
     note: 'Punjab’s tallest tower — forty-five storeys, with duplex penthouses at the crown.',
-    tags: ['University of Lahore', 'Luxury Apartments', 'Duplex Penthouses'], accent: '#bc3030', seed: 5
+    tags: ['University of Lahore', 'Luxury Apartments', 'Duplex Penthouses'], accent: '#d9a441', seed: 5
   },
   {
     id: 'poc-3', name: 'Pearl One Courtyard 3', badge: 'AVAILABLE',
     stats: [['31', 'Storeys']],
     city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
     note: 'Thirty-one storeys completing the Courtyard cluster.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 6
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 6
   },
   {
     id: 'pearl-one-premium', name: 'Pearl One Premium', badge: 'AVAILABLE',
     stats: [['23', 'Storeys']],
     city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
     note: 'Residences and a dedicated retail podium across twenty-three storeys.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 7
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 7
   },
   {
     id: 'pearl-one-capital', name: 'Pearl One Capital', badge: 'AVAILABLE',
     stats: [['300+', 'ft Height'], ['23', 'Storeys']],
     city: 'Islamabad', location: 'DHA Phase 2, Islamabad',
     note: 'The company’s capital-city address, rising over 300 feet in DHA Phase 2.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 8
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 8
   },
   {
     id: 'sialkot-central', name: 'Sialkot Central', badge: 'AVAILABLE',
     stats: [['23', 'Floors']],
     city: 'Sialkot', location: 'Prime location, Sialkot',
     note: 'Twenty-three floors bringing the Central format to Sialkot.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 9
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 9
   },
   {
     id: 'pearl-one-royal', name: 'Pearl One Royal', badge: 'AVAILABLE',
     stats: [['23', 'Storeys']],
     city: 'Lahore', location: 'Bahria Orchard Phase 2',
     note: 'A twenty-three storey residential and commercial tower in Bahria Orchard.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 10
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 10
   },
   {
     id: 'mall-residency-2', name: 'ABS Mall & Residency 2', badge: 'AVAILABLE',
     stats: [['15', 'Storeys']],
     city: 'Lahore', location: 'Ring Road Interchange, Bahria Town Lahore',
     note: 'The second Mall & Residency block — fifteen storeys over retail.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 11
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#d9a441', seed: 11
   },
   {
     id: 'mall-residency-1', name: 'ABS Mall & Residency 1', badge: 'POSSESSION READY',
     stats: [['9', 'Storeys']],
     city: 'Lahore', location: 'Ring Road Interchange, Bahria Town Lahore',
     note: 'Nine storeys of homes above a working mall — keys in hand.',
-    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#1f8a52', seed: 12
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#c9a25e', seed: 12
   },
   {
     id: 'pearl-one-tower', name: 'Pearl One Tower', badge: 'DELIVERED',
     stats: [['7', 'Storeys']],
     city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
     note: 'Completed, handed over, and now home to the ABS head office.',
-    tags: ['Mixed-Use', 'Retail Spaces', 'Community Hub'], accent: '#1f8a52', seed: 13
+    tags: ['Mixed-Use', 'Retail Spaces', 'Community Hub'], accent: '#c9a25e', seed: 13
   }
 ];
 
