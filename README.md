@@ -34,9 +34,10 @@ The visual language is the dark architectural one from the first build — near-
 surfaces, a single gold accent, Syne over Inter — carrying the content and structure
 taken from the company's live pages.
 
-**Project pages.** Seven detail pages — Burj Quaid, Pearl One Capital, Pearl One
-Premium, Pearl One Tower, Pearl One Royal and both ABS Mall & Residency blocks —
-all generated from one shell and driven by `projectPages` in `data.js`.
+**Project pages.** Ten detail pages — Burj Quaid, Pearl One Capital, Pearl One
+Premium, Pearl One Tower, Pearl One Royal, all three Courtyard towers and both
+ABS Mall & Residency blocks — generated from one shell by
+`tools/generate-project-pages.py` and driven by `projectPages` in `data.js`.
 
 Each page declares its sections with `data-needs="<selector>"`; `src/js/project.js`
 renders whatever the project defines and removes any section left empty, so the
@@ -44,9 +45,10 @@ pages differ without any per-page code. Burj Quaid gets travel times and nearby
 landmarks, Pearl One Capital gets unit tables and a booking process, Mall &
 Residency 2 gets investment benefits and a two-step booking — same renderer.
 
-Adding another project is one entry in `projectPages` plus a copy of the shell
-with a new `data-project` value; homepage cards link through automatically
-whenever a matching entry exists.
+Adding another project is one entry in `projectPages` plus a line in the
+generator's page list; run `python3 tools/generate-project-pages.py` and the
+shell is written. Homepage cards link through automatically whenever a matching
+entry exists.
 
 ## What's under it
 

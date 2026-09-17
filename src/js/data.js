@@ -504,3 +504,140 @@ projectPages['pearl-one-royal'] = {
     { title: 'Private residential lobby', sub: 'Arrival and reception levels', tiles: 2 }
   ]
 };
+
+/* --- the Courtyard cluster, Bahria Town Lahore ------------------------ */
+projectPages['poc-1'] = {
+  id: 'poc-1', name: 'Pearl One Courtyard 1', seed: 4, accent: '#d9a441',
+  eyebrow: 'A modern living experience',
+  tagline: 'Thirty floors, one address',
+  standfirst: 'A six-storey mall beneath twenty-three storeys of residences, in the heart of Bahria Town Lahore.',
+  specs: [['30', 'Floors total'], ['G+6', 'Storey mall'], ['23', 'Storey residence']],
+  location: {
+    title: 'Prime location in Bahria Town Lahore',
+    text: 'Tower 1 sits in the heart of Bahria Town, within reach of everything: Winter Land and the food court seconds away, the hospital and Imtiaz Mall minutes away, and the main roads just beyond.'
+  },
+  travel: {
+    title: 'Everything, minutes away',
+    items: [
+      ['10 sec', 'Winter Land & Food Court'],
+      ['3 min', 'Bahria Hospital & Imtiaz Mall'],
+      ['5 min', 'Ring Road & Raiwind Road'],
+      ['5 min', 'Canal Road']
+    ]
+  },
+  unitsTitle: 'Six residence types.',
+  unitsNote: 'From one-bed apartments through to double-storey penthouses at the crown of the tower.',
+  units: [
+    { type: '1-bed apartment' }, { type: '1-bed apartment, alternate plan' },
+    { type: '3-bed apartment' }, { type: '2-bed penthouse' },
+    { type: '3-bed penthouse' }, { type: 'Double-storey penthouse' }
+  ],
+  commercialTitle: 'Mall retail and commercial units.',
+  commercial: [
+    { type: 'Ground floor mall retail', size: '170 sq ft', note: 'Modern outlets on the primary retail level.' },
+    { type: 'First floor retail & office', size: '150 sq ft', note: 'Suited to corporate and service businesses.' },
+    { type: 'Lower ground retail', size: '150 sq ft', note: 'A further run of outlets below the mall floor.' },
+    { type: 'Commercial units, ground to 4th', size: '300 / 466 / 600 sq ft', note: 'Three footprints, available on every floor from ground to fourth.' },
+    { type: 'Wide commercial unit', size: '800 sq ft', note: 'Ground floor only — the largest single unit in the mall.' },
+    { type: 'Food court unit', size: '300 sq ft', note: 'Fitted space within the food court.' }
+  ],
+  landmarksTag: 'The building', landmarksTitle: 'What is built in.',
+  landmarks: [
+    ['Rooftop helipad', 'A helipad at the crown of the tower.'],
+    ['Rooftop garden', 'Landscaped leisure space above the residences.'],
+    ['Basement parking', 'Dedicated parking below the mall levels.'],
+    ['50+ amenities', 'Shared facilities across the development.'],
+    ['25-floor residency', 'The residential stack above the mall.'],
+    ['Bahria Town Lahore', 'Central to the whole community.']
+  ],
+  amenities: [
+    'Infinity swimming pool', 'Children’s play areas', 'Landscaped parks', 'CCTV surveillance',
+    'Indoor gym', 'Terrace', 'BBQ & dining area', 'Courtyard', 'Rooftop garden',
+    'Rooftop helipad', 'Basement parking', 'Shopping mall', 'Food court'
+  ],
+  galleries: [
+    { title: 'The development', sub: 'Mall levels and tower', tiles: 3 },
+    { title: 'Floor plans', sub: 'One bed · two bed · three bed · penthouse', tiles: 4 }
+  ]
+};
+
+projectPages['poc-2'] = {
+  id: 'poc-2', name: 'Pearl One Courtyard 2', seed: 5, accent: '#d9a441',
+  eyebrow: 'Punjab’s tallest residential tower',
+  tagline: 'Forty-five storeys of smart living',
+  standfirst: 'The tallest residential tower in Punjab, in the heart of Bahria Town Lahore.',
+  specs: [['45', 'Storeys'], ['50+', 'Amenities'], ['16+', 'Elevators']],
+  approvals: ['Punjab’s tallest residential tower'],
+  location: {
+    title: 'Perfect location in Bahria Town Lahore',
+    text: 'Alongside Tower 1 in the heart of Bahria Town, with the same reach: the food court seconds away, the hospital and Imtiaz Mall minutes away, and the main road network just beyond.'
+  },
+  travel: {
+    title: 'Everything, minutes away',
+    items: [
+      ['10 sec', 'Winter Land & Food Court'],
+      ['3 min', 'Bahria Hospital & Imtiaz Mall'],
+      ['5 min', 'Ring Road & Raiwind Road'],
+      ['5 min', 'Canal Road']
+    ]
+  },
+  unitsTitle: 'Six ways to live here.',
+  unitsNote: 'Apartments through to double-storey penthouses, across forty-five storeys.',
+  units: [
+    { type: '1-bed apartment' }, { type: '2-bed apartment' }, { type: '3-bed apartment' },
+    { type: '2-bed penthouse' }, { type: '3-bed penthouse' }, { type: 'Double-storey penthouse' }
+  ],
+  landmarksTag: 'The building', landmarksTitle: 'What is built in.',
+  landmarks: [
+    ['16+ elevators', 'Vertical transport sized for a forty-five storey tower.'],
+    ['50+ amenities', 'Shared facilities throughout the development.'],
+    ['Basement parking', 'Dedicated resident parking below the tower.'],
+    ['Huge residential lobby', 'The arrival level for residents.'],
+    ['24/7 CCTV security', 'Continuous monitoring across the building.'],
+    ['Bahria Town Lahore', 'Central to the whole community.']
+  ],
+  amenities: [
+    'Infinity swimming pool', 'Children’s play areas', 'Landscaped parks', 'CCTV surveillance',
+    'Indoor gym', 'Terrace', 'BBQ & dining area', 'Courtyard', '16+ elevators',
+    'Basement parking', 'Residential lobby', '24/7 security'
+  ],
+  galleries: [
+    { title: 'The tower', sub: 'Punjab’s tallest residential building', tiles: 3 },
+    { title: 'Floor plans', sub: 'One bed · two bed · three bed · penthouse', tiles: 4 }
+  ]
+};
+
+projectPages['poc-3'] = {
+  id: 'poc-3', name: 'Pearl One Courtyard 3', seed: 6, accent: '#d9a441',
+  eyebrow: 'Pearl One Courtyard III',
+  tagline: 'Thirty-one storeys, Bahria Town',
+  standfirst: 'The third tower of the Courtyard cluster, in one of Lahore’s most secure communities.',
+  specs: [['G+31', 'Storeys'], ['Bahria Town', 'Lahore'], ['Courtyard', 'Tower III']],
+  location: {
+    title: 'Strategically located in Bahria Town Lahore',
+    text: 'Seamless connectivity to the Ring Road, healthcare, retail destinations, community spaces and the wider attractions of Lahore.'
+  },
+  landmarksTag: 'Features & nearby landmarks', landmarksTitle: 'Built into Bahria Town.',
+  landmarks: [
+    ['22-lane entrance', 'The widest gateway of any Pakistani housing scheme.'],
+    ['10-lane roads', 'Arterial roads sized for the community they serve.'],
+    ['Latest sewerage system', 'Modern treatment and drainage infrastructure.'],
+    ['Solar parks', 'On-site solar generation within the scheme.'],
+    ['Power plant', 'Dedicated power generation nearby.'],
+    ['Golf course', 'A championship-scale course within the development.'],
+    ['Water park', 'Family recreation close to the tower.'],
+    ['Adventure park', 'Outdoor activity grounds nearby.']
+  ],
+  amenities: [
+    '24/7 room service & assistance', 'Private pools (select units)', 'Double-height lobby',
+    'High-speed elevators', 'Smart automated complex', 'Executive lounge', 'Library',
+    'Tennis court', 'Sauna & wellness spa', 'Bowling alley', 'Fitness & gym centre',
+    'Rooftop sky lounge', 'Landscaped green courtyards', 'Children’s play area',
+    'Co-working spaces', 'Smart home integration'
+  ],
+  galleries: [
+    { title: 'Exterior views', sub: 'The tower on approach', tiles: 3 },
+    { title: 'Apartment interiors', sub: 'Living, dining and bedrooms', tiles: 3 },
+    { title: 'Private residential lobby', sub: 'Arrival and reception levels', tiles: 2 }
+  ]
+};

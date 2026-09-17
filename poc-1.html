@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#08090c" />
+<title>Pearl One Courtyard — Real Estate Project by ABS Developers</title>
+<meta name="description" content="Pearl One Courtyard in Bahria Town Lahore — 30 floors comprising a six-storey mall and a 23-storey residence, with 50+ amenities and a rooftop helipad." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="src/css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090a0d'/%3E%3Cpath d='M16 4 L26 28 H6 Z' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3C/svg%3E" />
+<script type="importmap">
+{ "imports": { "three": "./src/vendor/three.module.min.js" } }
+</script>
+</head>
+<body data-project="poc-1">
+
+<div class="cursor" id="cursor"><span class="cursor__dot"></span><span class="cursor__ring"></span><span class="cursor__label"></span></div>
+<div class="scroll-progress"><i id="scrollBar"></i></div>
+
+<header class="nav is-stuck" id="nav">
+  <a class="nav__brand" href="index.html" data-cursor="Home">
+    <svg class="nav__logo" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,5 34,34 6,34"/><polygon class="o" points="20,15 27,29 13,29"/></svg>
+    <span class="nav__brand-text">ABS<em>Developers</em></span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary"></nav>
+  <a class="btn btn--sm nav__cta" href="#interest" data-cursor="Talk">Contact Us</a>
+  <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<div class="menu" id="menu">
+  <div class="menu__bg"></div>
+  <div class="menu__grid">
+    <ul class="menu__list" id="menuList"></ul>
+    <div class="menu__meta">
+      <p class="menu__label">Head Office</p>
+      <p id="menuAddress"></p>
+      <p class="menu__label">Enquiries</p>
+      <p><a id="menuPhone" href="#"></a><br/><a id="menuEmail" href="#"></a></p>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ===== PROJECT HERO ===== -->
+<section class="phero" id="top">
+  <canvas id="cityCanvas" class="hero__canvas"></canvas>
+  <div class="hero__veil"></div>
+  <div class="wrap phero__inner">
+    <a class="phero__back" href="index.html#projects" data-cursor="Back">← All projects</a>
+    <p class="hero__eyebrow reveal-line"><i></i><span id="pEyebrow"></span></p>
+    <h1 class="phero__title" id="pTitle"></h1>
+    <p class="phero__tagline reveal-line" id="pTagline"></p>
+    <p class="phero__stand reveal-line" id="pStand"></p>
+    <div class="phero__specs" id="pSpecs"></div>
+    <div class="phero__approvals" id="pApprovals"></div>
+    <div class="hero__actions reveal-line">
+      <a class="btn" href="#interest" data-cursor="Register">Register your interest<i class="btn__arrow">→</i></a>
+      <a class="btn btn--ghost" href="#amenities" data-cursor="Look">Explore the project</a>
+    </div>
+    <p class="phero__market reveal-line" id="pMarket"></p>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="section travel" id="location" data-needs="#locTitle">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Location</p>
+      <h2 class="h2 split" id="travelTitle">Where it stands.</h2>
+    </header>
+    <div class="travel__grid" id="travelGrid"></div>
+    <div class="locnote reveal">
+      <h3 id="locTitle"></h3>
+      <p id="locText"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESIDENTIAL ===== -->
+<section class="section units" id="units" data-needs="#unitList">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Residential apartments</p>
+      <h2 class="h2 split" id="unitsTitle">The residences.</h2>
+      <p class="lede reveal" id="unitsNote"></p>
+    </header>
+    <div class="ugrid" id="unitList"></div>
+  </div>
+</section>
+
+<!-- ===== COMMERCIAL ===== -->
+<section class="section units units--alt" id="commercial" data-needs="#commercialList">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Commercial units</p>
+      <h2 class="h2 split" id="commercialTitle">Retail and offices.</h2>
+    </header>
+    <div class="ugrid" id="commercialList"></div>
+  </div>
+</section>
+
+<!-- ===== GALLERIES ===== -->
+<section class="section pgallery" id="gallery" data-needs="#galleryHost">
+  <div class="wrap" id="galleryHost"></div>
+</section>
+
+<!-- ===== LANDMARKS / FEATURES ===== -->
+<section class="section landmarks" id="features" data-needs="#landmarkGrid">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal" id="landmarksTag">Features &amp; nearby landmarks</p>
+      <h2 class="h2 split" id="landmarksTitle">What surrounds it.</h2>
+    </header>
+    <div class="lgrid" id="landmarkGrid"></div>
+  </div>
+</section>
+
+<!-- ===== AMENITIES ===== -->
+<section class="section amenities" id="amenities" data-needs="#amenList">
+  <div class="wrap amen__grid">
+    <div>
+      <p class="tag reveal">Amenities</p>
+      <h2 class="h2 split">Everything, in the building.</h2>
+      <p class="lede reveal">The shared spaces and services planned through the development.</p>
+    </div>
+    <ul class="amen__list" id="amenList"></ul>
+  </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section class="section booking" id="booking" data-needs="#bookingSteps">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Booking</p>
+      <h2 class="h2 split" id="bookingTitle">How to book.</h2>
+      <p class="lede reveal" id="bookingNote"></p>
+    </header>
+    <ol class="bsteps" id="bookingSteps"></ol>
+    <ul class="bcontacts" id="bookingContacts"></ul>
+  </div>
+</section>
+
+<!-- ===== REGISTER INTEREST ===== -->
+<section class="section interest" id="interest">
+  <div class="wrap interest__grid">
+    <div class="interest__left">
+      <p class="tag reveal">Register Your Interest</p>
+      <h2 class="h2 split">Talk to the sales team.</h2>
+      <p class="lede reveal">Complete the form and our team will come back with full project information — availability, payment plans and possession timelines.</p>
+      <ul class="contact__info">
+        <li class="reveal"><span>Head Office</span><b id="cAddress"></b></li>
+        <li class="reveal"><span>Phone</span><b><a id="cPhone" href="#"></a></b></li>
+        <li class="reveal"><span>Email</span><b><a id="cEmail" href="#"></a></b></li>
+      </ul>
+    </div>
+    <form class="form reveal" id="form" novalidate>
+      <div class="field"><input id="fName" name="name" required placeholder=" " autocomplete="name" /><label for="fName">Full name</label></div>
+      <div class="form__row">
+        <div class="field field--code"><select id="fCode" name="code" aria-label="Country code"></select><label for="fCode" class="label--static">Code</label></div>
+        <div class="field"><input id="fPhone" name="phone" required placeholder=" " inputmode="tel" autocomplete="tel" /><label for="fPhone">Phone number</label></div>
+      </div>
+      <div class="field"><input id="fEmail" type="email" name="email" required placeholder=" " autocomplete="email" /><label for="fEmail">Email</label></div>
+      <div class="field"><select id="fProject" name="project"></select><label for="fProject" class="label--static">Project of interest</label></div>
+      <div class="field"><textarea id="fMsg" name="message" rows="3" placeholder=" "></textarea><label for="fMsg">Message</label></div>
+      <button class="btn btn--full" type="submit" data-cursor="Send">Submit<i class="btn__arrow">→</i></button>
+      <p class="form__note" id="formNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div class="footer__brand">
+      <h2 class="footer__mark">ABS<em>DEVELOPERS</em></h2>
+      <p id="footerBlurb"></p>
+    </div>
+    <div class="footer__cols" id="footerCols"></div>
+    <div class="footer__contact">
+      <p class="menu__label">Contact Info</p>
+      <p id="fAddress"></p>
+      <p><a id="fPhoneLink" href="#"></a></p>
+      <p><a id="fEmailLink" href="#"></a></p>
+      <p><span id="fSite"></span></p>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© <span id="year"></span> ABS Developers (Pvt.) Ltd. All rights reserved.</p>
+    <p class="footer__note">Concept build — original design and visuals, public company information.</p>
+  </div>
+</footer>
+
+<script type="module" src="src/js/project.js"></script>
+</body>
+</html>
