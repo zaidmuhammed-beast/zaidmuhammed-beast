@@ -34,6 +34,12 @@ The visual language is the dark architectural one from the first build — near-
 surfaces, a single gold accent, Syne over Inter — carrying the content and structure
 taken from the company's live pages.
 
+**Project pages.** `burj-quaid.html` is a full detail page driven by
+`projectPages` in `data.js` — hero specifications, approvals, travel times,
+galleries, nearby landmarks and the amenity list. Adding another project page is
+a new entry in that object plus a copy of the HTML shell with a different
+`data-project` value; `src/js/project.js` renders the rest.
+
 ## What's under it
 
 **Hero — procedural WebGL skyline.** A seeded night city of instanced towers with a

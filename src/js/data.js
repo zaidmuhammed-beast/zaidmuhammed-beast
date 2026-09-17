@@ -190,3 +190,62 @@ export const blog = [
   { tag: 'Projects', title: 'Inside Burj Quaid: building Pakistan’s tallest tower', read: '6 min read' },
   { tag: 'Market', title: 'What on-time possession actually requires', read: '5 min read' }
 ];
+
+/* ------------------------------------------------------------------
+ * Project pages. Specifications, approvals, travel times, location
+ * features and amenities are the developments' published details.
+ * ------------------------------------------------------------------ */
+export const projectPages = {
+  'burj-quaid': {
+    id: 'burj-quaid',
+    name: 'Burj Quaid',
+    eyebrow: 'A Landmark Above the City',
+    tagline: 'Where Pakistan Touches the Sky',
+    standfirst: 'A tribute to the enduring legacy of Quaid-e-Azam Muhammad Ali Jinnah, by ABS Developers.',
+    intro: 'Rising 941 feet over DHA City Karachi, Burj Quaid is set to become Pakistan’s tallest skyscraper — eighty-two storeys of apartments, offices and hospitality wrapped around a single vertical address.',
+    seed: 1,
+    accent: '#d9a441',
+    specs: [
+      ['941', 'ft Height'],
+      ['82', 'Storeys'],
+      ['DHA City', 'Karachi']
+    ],
+    approvals: ['CAA Approved', 'PAA Approved', 'DHA Approved'],
+    marketedBy: 'Exclusively marketed by Discover Pakistan',
+    travel: {
+      title: 'Travel times after the Malir Expressway completes',
+      items: [
+        ['25 mins', 'from Clifton'],
+        ['25 mins', 'from the Airport'],
+        ['25 mins', 'from Shahra-e-Faisal'],
+        ['25 mins', 'from Sea View']
+      ]
+    },
+    location: {
+      title: 'Strategically located in DHA City Karachi',
+      text: 'Direct links to the major highways, and minutes from the commercial districts, schools, healthcare and recreation planned across DHA City.'
+    },
+    landmarks: [
+      ['22-lane entrance', 'The widest gateway of any Pakistani housing scheme.'],
+      ['10-lane roads', 'Arterial roads sized for the city DHA City will become.'],
+      ['Latest sewerage system', 'Modern treatment and drainage infrastructure.'],
+      ['Solar parks', 'On-site solar generation within the scheme.'],
+      ['Lucky power plant', 'Dedicated power generation nearby.'],
+      ['Largest golf course', 'A championship-scale course inside the development.'],
+      ['Water park', 'Family recreation minutes from the tower.'],
+      ['Adventure park', 'Outdoor activity grounds within DHA City.']
+    ],
+    amenities: [
+      '24/7 room service & assistance', 'Private pools (select units)', 'Double-height lobby',
+      'High-speed elevators', 'Smart automated complex', 'Executive lounge', 'Library',
+      'Tennis court', 'Sauna & wellness spa', 'Bowling alley', 'Fitness & gym centre',
+      'Rooftop sky lounge', 'Landscaped green courtyards', 'Children’s play area',
+      'Co-working spaces', 'Smart home integration'
+    ],
+    galleries: [
+      { title: 'Exterior views', sub: 'The tower on the DHA City skyline', tiles: 3 },
+      { title: 'Apartment interiors', sub: 'Living, dining, kitchen and bedrooms', tiles: 3 },
+      { title: 'Private residential lobby', sub: 'Arrival and reception levels', tiles: 2 }
+    ]
+  }
+};

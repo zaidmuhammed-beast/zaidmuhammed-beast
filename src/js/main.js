@@ -58,9 +58,11 @@ function renderHero() {
 function renderProjects() {
   const grid = $('#projectGrid');
   data.projects.forEach((p) => {
-    const card = el('article', 'card');
+    const hasPage = !!data.projectPages?.[p.id];
+    const card = el(hasPage ? 'a' : 'article', 'card');
+    if (hasPage) { card.href = `${p.id}.html`; }
     card.dataset.city = p.city;
-    card.dataset.cursor = 'View';
+    card.dataset.cursor = hasPage ? 'Open' : 'View';
     card.innerHTML = `
       <div class="card__vis">
         <span class="card__badge" data-badge="${p.badge}">${p.badge}</span>
