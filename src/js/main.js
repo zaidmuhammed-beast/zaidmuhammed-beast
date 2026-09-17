@@ -22,10 +22,12 @@ function renderNav() {
   const links = $('#navLinks');
   const menu = $('#menuList');
   data.nav.forEach((item, i) => {
+    // About has a page of its own; the rest are sections on this page
+    const href = item.href === '#about' ? 'about.html' : item.href;
     const a = el('a', null, item.label);
-    a.href = item.href;
+    a.href = href;
     links.append(a);
-    menu.append(el('li', null, `<a href="${item.href}"><b>0${i + 1}</b>${item.label}</a>`));
+    menu.append(el('li', null, `<a href="${href}"><b>0${i + 1}</b>${item.label}</a>`));
   });
   menu.append(el('li', null, `<a href="#interest"><b>0${data.nav.length + 1}</b>Contact Us</a>`));
 
@@ -169,7 +171,8 @@ function renderFooter() {
   Object.entries(data.footerLinks).forEach(([title, links]) => {
     cols.append(el('div', null,
       `<p class="menu__label">${title}</p><ul>${
-        links.map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join('')}</ul>`));
+        links.map(([label, href]) =>
+        `<li><a href="${href === '#about' ? 'about.html' : href}">${label}</a></li>`).join('')}</ul>`));
   });
   $('#fAddress').textContent = c.address;
   const p = $('#fPhoneLink'); p.textContent = c.phone; p.href = `tel:${c.phoneHref}`;

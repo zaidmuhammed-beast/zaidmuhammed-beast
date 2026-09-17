@@ -34,9 +34,14 @@ The visual language is the dark architectural one from the first build — near-
 surfaces, a single gold accent, Syne over Inter — carrying the content and structure
 taken from the company's live pages.
 
-**Project pages.** Ten detail pages — Burj Quaid, Pearl One Capital, Pearl One
-Premium, Pearl One Tower, Pearl One Royal, all three Courtyard towers and both
-ABS Mall & Residency blocks — generated from one shell by
+**About page.** `about.html` carries the company story, the board of directors
+and the published benefits list, rendered from `about` in `data.js` by
+`src/js/about.js`. Nav and footer links point at it from every page.
+
+**Project pages.** Twelve detail pages — Burj Quaid, Pearl One Capital, Pearl
+One Premium, Pearl One Tower, Pearl One Royal, ABS Executive, ABS Central, all
+three Courtyard towers and both ABS Mall & Residency blocks — generated from one
+shell by
 `tools/generate-project-pages.py` and driven by `projectPages` in `data.js`.
 
 Each page declares its sections with `data-needs="<selector>"`; `src/js/project.js`
@@ -86,8 +91,11 @@ forever. A sweep activates anything at or above the trigger line regardless.
 ```
 index.html              markup + import map
 src/css/style.css       design system, layout, responsive rules
-src/js/data.js          every piece of content on the page
-src/js/main.js          renders sections from data, boots everything
+src/js/data.js          every piece of content across the site
+src/js/main.js          homepage: renders sections from data, boots everything
+src/js/project.js       project detail pages
+src/js/about.js         about page
+src/js/chrome.js        nav, menu, footer and form chrome shared by inner pages
 src/js/ui.js            reveals, counters, cursor, nav, form
 src/js/cardart.js       procedural 2D project artwork
 src/js/three/city.js    hero skyline scene

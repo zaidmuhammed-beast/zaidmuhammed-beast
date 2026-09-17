@@ -7,6 +7,7 @@
 import * as data from './data.js';
 import { paintProject } from './cardart.js';
 import { initReveals, initCursor, initNav, initForm, initTilt, reduced, clamp } from './ui.js';
+import { renderChrome } from './chrome.js';
 
 const $ = (s) => document.querySelector(s);
 const el = (tag, cls, html) => {
@@ -18,51 +19,6 @@ const el = (tag, cls, html) => {
 
 const page = data.projectPages[document.body.dataset.project];
 if (!page) throw new Error(`Unknown project page: ${document.body.dataset.project}`);
-
-/* ---------------- shared chrome ---------------- */
-function renderChrome() {
-  const links = $('#navLinks');
-  const menu = $('#menuList');
-  data.nav.forEach((item, i) => {
-    const href = item.href === '#home' ? 'index.html' : `index.html${item.href}`;
-    const a = el('a', null, item.label);
-    a.href = href;
-    links.append(a);
-    menu.append(el('li', null, `<a href="${href}"><b>0${i + 1}</b>${item.label}</a>`));
-  });
-  menu.append(el('li', null, `<a href="#interest"><b>0${data.nav.length + 1}</b>Contact Us</a>`));
-
-  const c = data.company;
-  $('#menuAddress').innerHTML = c.address.replace(/, /g, ',<br/>');
-  const set = (id, text, href) => { const n = $(id); if (!n) return; n.textContent = text; if (href) n.href = href; };
-  set('#menuPhone', c.phone, `tel:${c.phoneHref}`);
-  set('#menuEmail', c.email, `mailto:${c.email}`);
-  set('#cAddress', c.address);
-  set('#cPhone', c.phone, `tel:${c.phoneHref}`);
-  set('#cEmail', c.email, `mailto:${c.email}`);
-  set('#fAddress', c.address);
-  set('#fPhoneLink', c.phone, `tel:${c.phoneHref}`);
-  set('#fEmailLink', c.email, `mailto:${c.email}`);
-  set('#fSite', c.site);
-  set('#footerBlurb', c.blurb);
-  $('#year').textContent = new Date().getFullYear();
-
-  const cols = $('#footerCols');
-  Object.entries(data.footerLinks).forEach(([title, links2]) => {
-    cols.append(el('div', null, `<p class="menu__label">${title}</p><ul>${
-      links2.map(([label, href]) =>
-        `<li><a href="${href.startsWith('#interest') ? href : `index.html${href}`}">${label}</a></li>`).join('')
-    }</ul>`));
-  });
-
-  const sel = $('#fProject');
-  ['Not sure yet', ...data.projects.map((p) => p.name)].forEach((n) => sel.append(new Option(n, n)));
-  sel.value = page.name;
-
-  const codes = ['+92 PK', '+971 AE', '+966 SA', '+44 UK', '+1 US', '+61 AU', '+60 MY', '+90 TR', '+86 CN'];
-  const code = $('#fCode');
-  codes.forEach((c2) => code.append(new Option(c2, c2.split(' ')[0])));
-}
 
 /* ---------------- hero ---------------- */
 function renderHero() {
@@ -215,7 +171,7 @@ async function initWebGL() {
 
 /* ---------------- boot ---------------- */
 function boot() {
-  renderChrome();
+  renderChrome({ preselectProject: page.name });
   renderHero();
   renderLocation();
   renderUnits();

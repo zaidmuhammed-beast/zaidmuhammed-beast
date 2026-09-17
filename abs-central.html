@@ -1,19 +1,49 @@
-"""Regenerate every project detail page from one shell.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#08090c" />
+<title>ABS Central — Ring Road Interchange, Lahore — ABS Developers</title>
+<meta name="description" content="ABS Central — a 23-storey tower at the Ring Road interchange of Bahria Town Lahore, with direct access to the Ring Road and Canal Road." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="src/css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090a0d'/%3E%3Cpath d='M16 4 L26 28 H6 Z' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3C/svg%3E" />
+<script type="importmap">
+{ "imports": { "three": "./src/vendor/three.module.min.js" } }
+</script>
+</head>
+<body data-project="abs-central">
 
-Usage: python3 tools/generate-project-pages.py
-Section content comes from `projectPages` in src/js/data.js at runtime; this
-only writes the shells (title, description and data-project per page).
-"""
-import re
-import os
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-shell = open(os.path.join(ROOT, 'burj-quaid.html')).read()
+<div class="cursor" id="cursor"><span class="cursor__dot"></span><span class="cursor__ring"></span><span class="cursor__label"></span></div>
+<div class="scroll-progress"><i id="scrollBar"></i></div>
 
-# ---- build a universal body from the existing shell ----
-head_start = shell[:shell.index('<main>')]
-tail = shell[shell.index('</main>'):]
+<header class="nav is-stuck" id="nav">
+  <a class="nav__brand" href="index.html" data-cursor="Home">
+    <svg class="nav__logo" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,5 34,34 6,34"/><polygon class="o" points="20,15 27,29 13,29"/></svg>
+    <span class="nav__brand-text">ABS<em>Developers</em></span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary"></nav>
+  <a class="btn btn--sm nav__cta" href="#interest" data-cursor="Talk">Contact Us</a>
+  <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
 
-BODY = '''<main>
+<div class="menu" id="menu">
+  <div class="menu__bg"></div>
+  <div class="menu__grid">
+    <ul class="menu__list" id="menuList"></ul>
+    <div class="menu__meta">
+      <p class="menu__label">Head Office</p>
+      <p id="menuAddress"></p>
+      <p class="menu__label">Enquiries</p>
+      <p><a id="menuPhone" href="#"></a><br/><a id="menuEmail" href="#"></a></p>
+    </div>
+  </div>
+</div>
+
+<main>
 
 <!-- ===== PROJECT HERO ===== -->
 <section class="phero" id="top">
@@ -142,40 +172,29 @@ BODY = '''<main>
   </div>
 </section>
 
-'''
+</main>
 
-pages = {
- 'burj-quaid': ("Tallest Building in Karachi — Burj Quaid by ABS Developers",
-   "Burj Quaid is Karachi's tallest building — an 82-storey mixed-use tower in DHA City Karachi with luxury apartments, offices and premium amenities."),
- 'pearl-one-capital': ("Pearl One Capital — Pre-Launching Soon in DHA Islamabad",
-   "Pearl One Capital is coming to DHA Islamabad — 300+ luxury residences, smart retail units and more than a hundred amenities. Pre-launch registration open."),
- 'pearl-one-premium': ("Pearl One Premium in Bahria Town Lahore — ABS Developers",
-   "Pearl One Premium in Bahria Town Lahore — ultra-luxury 25-storey residences over a shopping mall, with premium amenities throughout."),
- 'pearl-one-tower': ("Pearl One Tower — Bahria Town Lahore — ABS Developers",
-   "Pearl One Tower in Bahria Town Lahore — delivered and possession ready, with 150+ residences and premium building amenities."),
- 'mall-residency-1': ("ABS Mall & Residency — Premier Living & Shopping",
-   "ABS Mall & Residency 1 in Bahria Town Lahore — 140+ residences above a shopping mall at the Ring Road interchange. Possession ready."),
- 'mall-residency-2': ("ABS Mall & Residency 2 — Bahria Town Lahore",
-   "ABS Mall & Residency 2 offers 1, 2 and 3-bedroom apartments and retail units in Bahria Town Lahore, with a rooftop garden, gym and premium amenities."),
- 'pearl-one-royal': ("Pearl One Royal — Bahria Orchard Phase 2, Lahore",
-   "Pearl One Royal — a 23-storey residential and commercial tower in Bahria Orchard Phase 2, Lahore, with premium amenities and Bahria Town landmarks nearby."),
- 'poc-1': ("Pearl One Courtyard — Real Estate Project by ABS Developers",
-   "Pearl One Courtyard in Bahria Town Lahore — 30 floors comprising a six-storey mall and a 23-storey residence, with 50+ amenities and a rooftop helipad."),
- 'poc-2': ("Pearl One Courtyard 2 — Smart Living in Bahria Town Lahore",
-   "Pearl One Courtyard 2 is Punjab's tallest residential tower — 45 storeys in Bahria Town Lahore with 50+ amenities and 16+ elevators."),
- 'poc-3': ("Pearl One Courtyard 3 — Bahria Town Lahore — ABS Developers",
-   "Pearl One Courtyard III — a 31-storey tower in Bahria Town Lahore with premium amenities and the community's landmarks nearby."),
- 'abs-executive': ("ABS Executive — At the Heart of Lahore — ABS Developers",
-   "ABS Executive — a 23-storey tower on the Lahore Ring Road interchange, minutes from DHA Phases 4, 5 and 6 and the airport."),
- 'abs-central': ("ABS Central — Ring Road Interchange, Lahore — ABS Developers",
-   "ABS Central — a 23-storey tower at the Ring Road interchange of Bahria Town Lahore, with direct access to the Ring Road and Canal Road."),
-}
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div class="footer__brand">
+      <h2 class="footer__mark">ABS<em>DEVELOPERS</em></h2>
+      <p id="footerBlurb"></p>
+    </div>
+    <div class="footer__cols" id="footerCols"></div>
+    <div class="footer__contact">
+      <p class="menu__label">Contact Info</p>
+      <p id="fAddress"></p>
+      <p><a id="fPhoneLink" href="#"></a></p>
+      <p><a id="fEmailLink" href="#"></a></p>
+      <p><span id="fSite"></span></p>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© <span id="year"></span> ABS Developers (Pvt.) Ltd. All rights reserved.</p>
+    <p class="footer__note">Concept build — original design and visuals, public company information.</p>
+  </div>
+</footer>
 
-for pid, (title, desc) in pages.items():
-    head = head_start
-    head = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', head, flags=re.S)
-    head = re.sub(r'<meta name="description" content=".*?" />',
-                  f'<meta name="description" content="{desc}" />', head, flags=re.S)
-    head = re.sub(r'<body data-project="[^"]*">', f'<body data-project="{pid}">', head)
-    open(os.path.join(ROOT, f'{pid}.html'),'w').write(head + BODY + tail)
-    print('wrote', pid + '.html')
+<script type="module" src="src/js/project.js"></script>
+</body>
+</html>

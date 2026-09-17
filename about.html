@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#08090c" />
+<title>Expert Real Estate &amp; Development Services — ABS Developers</title>
+<meta name="description" content="About ABS Developers — Pakistan's first Shariah-compliant real estate company, founded in 2015 to build luxury living at affordable rates." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="src/css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090a0d'/%3E%3Cpath d='M16 4 L26 28 H6 Z' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3C/svg%3E" />
+<script type="importmap">
+{ "imports": { "three": "./src/vendor/three.module.min.js" } }
+</script>
+</head>
+<body class="page-about">
+
+<div class="cursor" id="cursor"><span class="cursor__dot"></span><span class="cursor__ring"></span><span class="cursor__label"></span></div>
+<div class="scroll-progress"><i id="scrollBar"></i></div>
+
+<header class="nav is-stuck" id="nav">
+  <a class="nav__brand" href="index.html" data-cursor="Home">
+    <svg class="nav__logo" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,5 34,34 6,34"/><polygon class="o" points="20,15 27,29 13,29"/></svg>
+    <span class="nav__brand-text">ABS<em>Developers</em></span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary"></nav>
+  <a class="btn btn--sm nav__cta" href="#interest" data-cursor="Talk">Contact Us</a>
+  <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<div class="menu" id="menu">
+  <div class="menu__bg"></div>
+  <div class="menu__grid">
+    <ul class="menu__list" id="menuList"></ul>
+    <div class="menu__meta">
+      <p class="menu__label">Head Office</p>
+      <p id="menuAddress"></p>
+      <p class="menu__label">Enquiries</p>
+      <p><a id="menuPhone" href="#"></a><br/><a id="menuEmail" href="#"></a></p>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ===== ABOUT HERO ===== -->
+<section class="phero phero--short" id="top">
+  <canvas id="cityCanvas" class="hero__canvas"></canvas>
+  <div class="hero__veil"></div>
+  <div class="wrap phero__inner">
+    <a class="phero__back" href="index.html" data-cursor="Home">← Home</a>
+    <p class="hero__eyebrow reveal-line"><i></i>About us</p>
+    <h1 class="phero__title" id="aTitle"></h1>
+    <p class="phero__stand reveal-line" id="aLead"></p>
+    <div class="phero__approvals" id="aPillars"></div>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="section about" id="story">
+  <div class="wrap about__grid">
+    <div class="about__left">
+      <p class="tag reveal">About our company</p>
+      <h2 class="h2 split">Luxury, made affordable.</h2>
+      <div id="aStory"></div>
+    </div>
+    <aside class="about__right">
+      <div class="panel reveal" id="aPanel"></div>
+      <div class="about__badge reveal"><canvas id="emblemCanvas"></canvas></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="section stats">
+  <div class="wrap stats__grid" id="statsGrid"></div>
+</section>
+
+<!-- ===== BOARD ===== -->
+<section class="section board" id="board">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Board of Directors</p>
+      <h2 class="h2 split">The people behind it.</h2>
+      <p class="lede reveal" id="aBoardNote"></p>
+    </header>
+    <div class="bgrid" id="aBoard"></div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="section landmarks" id="why">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="tag reveal">Why choose us</p>
+      <h2 class="h2 split" id="aWhyTitle"></h2>
+      <p class="lede reveal" id="aWhyNote"></p>
+    </header>
+    <div class="lgrid" id="aWhy"></div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section value" id="cta">
+  <div class="wrap value__inner">
+    <span class="value__badge reveal">100% Shariah Compliant</span>
+    <h2 class="h2 split">Talk to us about your next home.</h2>
+    <p class="lede reveal">Our investment desk will walk you through availability, payment plans and possession timelines on any project in the portfolio.</p>
+    <div class="value__actions reveal">
+      <a class="btn" href="index.html#interest" data-cursor="Talk">Contact us<i class="btn__arrow">→</i></a>
+      <a class="btn btn--ghost" href="index.html#projects" data-cursor="View">Explore projects</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div class="footer__brand">
+      <h2 class="footer__mark">ABS<em>DEVELOPERS</em></h2>
+      <p id="footerBlurb"></p>
+    </div>
+    <div class="footer__cols" id="footerCols"></div>
+    <div class="footer__contact">
+      <p class="menu__label">Contact Info</p>
+      <p id="fAddress"></p>
+      <p><a id="fPhoneLink" href="#"></a></p>
+      <p><a id="fEmailLink" href="#"></a></p>
+      <p><span id="fSite"></span></p>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© <span id="year"></span> ABS Developers (Pvt.) Ltd. All rights reserved.</p>
+    <p class="footer__note">Concept build — original design and visuals, public company information.</p>
+  </div>
+</footer>
+
+<script type="module" src="src/js/about.js"></script>
+</body>
+</html>
+

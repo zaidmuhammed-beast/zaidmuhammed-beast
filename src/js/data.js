@@ -12,6 +12,7 @@ export const company = {
   phone: '03-222-333-332',
   phoneHref: '+923222333332',
   email: 'info@abs-developers.com',
+  founded: 2015,
   site: 'abs-developers.com'
 };
 
@@ -639,5 +640,102 @@ projectPages['poc-3'] = {
     { title: 'Exterior views', sub: 'The tower on approach', tiles: 3 },
     { title: 'Apartment interiors', sub: 'Living, dining and bedrooms', tiles: 3 },
     { title: 'Private residential lobby', sub: 'Arrival and reception levels', tiles: 2 }
+  ]
+};
+
+/* --- Lahore ring-road pair ------------------------------------------- */
+projectPages['abs-executive'] = {
+  id: 'abs-executive', name: 'ABS Executive', seed: 2, accent: '#d9a441',
+  eyebrow: 'At the heart of Lahore',
+  tagline: 'On the interchange itself',
+  standfirst: 'Twenty-three storeys facing DHA Phase 5, with the Ring Road interchange at the door.',
+  specs: [['G+23', 'Storeys'], ['0 min', 'To the interchange'], ['Lahore', 'DHA Phase 5']],
+  location: {
+    title: 'Strategically located at the heart of Lahore',
+    text: 'Seamless connectivity to the Lahore Ring Road interchange, DHA Phases 4, 5 and 6, the airport, the major highways and the commercial districts between them.'
+  },
+  travel: {
+    title: 'Travel distance to ABS Executive',
+    items: [
+      ['0 min', 'Lahore Ring Road Interchange'],
+      ['2 min', 'DHA Phase 4, 5 & 6'],
+      ['5 min', 'Allama Iqbal International Airport'],
+      ['15 min', 'M2 Motorway, Gulberg & Ferozepur Road']
+    ]
+  },
+  amenities: [
+    '24/7 room service & assistance', 'Private pools (select units)', 'Double-height lobby',
+    'High-speed elevators', 'Smart automated complex', 'Executive lounge', 'Library',
+    'Tennis court', 'Sauna & wellness spa', 'Bowling alley', 'Fitness & gym centre',
+    'Rooftop sky lounge', 'Landscaped green courtyards', 'Children’s play area',
+    'Co-working spaces', 'Smart home integration'
+  ],
+  galleries: [
+    { title: 'Exterior views', sub: 'The tower on the interchange', tiles: 3 },
+    { title: 'Apartment interiors', sub: 'Living, dining and bedrooms', tiles: 3 },
+    { title: 'Private residential lobby', sub: 'Arrival and reception levels', tiles: 2 }
+  ]
+};
+
+projectPages['abs-central'] = {
+  id: 'abs-central', name: 'ABS Central', seed: 3, accent: '#d9a441',
+  eyebrow: 'Ring Road interchange',
+  tagline: 'Connected in every direction',
+  standfirst: 'Twenty-three storeys at the Tarogill interchange of Bahria Town Lahore — one of the city’s fastest-growing addresses.',
+  specs: [['G+23', 'Storeys'], ['Ring Road', 'Interchange'], ['Bahria Town', 'Lahore']],
+  location: {
+    title: 'Strategically located at the Ring Road interchange',
+    text: 'Unmatched connectivity to Lahore’s key destinations, in one of the city’s most valuable growth locations.'
+  },
+  travel: {
+    title: 'Travel connectivity from the Tarogill interchange',
+    items: [
+      ['Instant', 'Access to Lahore Ring Road'],
+      ['Direct', 'Connectivity to Canal Road'],
+      ['Easy', 'Access to the airport and DHA'],
+      ['Close', 'To Bahria Town facilities']
+    ]
+  },
+  amenities: [
+    '24/7 room service & assistance', 'Private pools (select units)', 'Double-height lobby',
+    'High-speed elevators', 'Smart automated complex', 'Executive lounge', 'Library',
+    'Tennis court', 'Sauna & wellness spa', 'Bowling alley', 'Fitness & gym centre',
+    'Rooftop sky lounge', 'Landscaped green courtyards', 'Children’s play area',
+    'Co-working spaces', 'Smart home integration'
+  ],
+  galleries: [
+    { title: 'Exterior views', sub: 'The tower at the interchange', tiles: 3 },
+    { title: 'Apartment interiors', sub: 'Living, dining and bedrooms', tiles: 3 },
+    { title: 'Private residential lobby', sub: 'Arrival and reception levels', tiles: 2 }
+  ]
+};
+
+/* ------------------------------------------------------------------
+ * About page — company facts, board and the published benefits list.
+ * ------------------------------------------------------------------ */
+export const about = {
+  title: 'About ABS Developers',
+  lead: 'A real estate developer building luxury into everyday living — and the first Shariah-compliant one in the country.',
+  story: [
+    'ABS was founded in 2015 to build construction projects that answer the luxury-living needs of both the middle and the elite, rather than choosing between them.',
+    'What sets the company apart is the ground it broke: luxurious apartments and buildings fitted with world-class, modern amenities at genuinely affordable rates.',
+    'Working in an Islamic state, ABS is proud to be the first Shariah-compliant real estate company in Pakistan — a statement of honesty in trade and of regard for the people it trades with.'
+  ],
+  pillars: ['Quality', 'Luxury', 'Affordability'],
+  boardNote: 'A real estate company owes its achievements to its people — from the chairman through to the engineers on site.',
+  board: [
+    { name: 'Dr Muhammad Ikram', role: 'Chairman' },
+    { name: 'Dr Subayyal Ikram', role: 'Chief Executive Officer' },
+    { name: 'Dr Humbal Ikram', role: 'Managing Director' },
+    { name: 'Ar. Shaniyal Ikram', role: 'Director Operations' }
+  ],
+  whyTitle: 'Why choose us?',
+  whyNote: 'Partnering with ABS Developers makes you eligible for the following:',
+  why: [
+    ['Shariah compliant', 'The first Shariah-compliant real estate company in Pakistan.'],
+    ['100% riba-free dealings', 'No interest at any point in the transaction.'],
+    ['Full and easy cash refund', 'A straightforward refund route if plans change.'],
+    ['Tested materials', 'Quality material testing before anything is used on site.'],
+    ['Cutting-edge amenities', 'Modern facilities built into the construction itself.']
   ]
 };

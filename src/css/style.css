@@ -549,3 +549,24 @@ a.card{display:block;color:inherit}
   .ugrid,.bsteps{grid-template-columns:1fr}
   .bstep{border-right:0}
 }
+
+.inline-link{color:var(--red);border-bottom:1px solid rgba(217,164,65,.4);padding-bottom:2px;
+  transition:border-color .35s,color .35s}
+.inline-link:hover{color:var(--red-2);border-color:var(--red-2)}
+
+/* ---------- about: board of directors ---------- */
+.phero--short{min-height:auto;padding-block:calc(var(--nav-h) + 90px) 90px}
+.board{background:var(--paper);border-block:1px solid var(--line)}
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bcard{border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;background:var(--cream);
+  transition:transform .5s var(--ease),border-color .5s;transform-style:preserve-3d}
+.bcard:hover{border-color:rgba(217,164,65,.45)}
+.bcard__mono{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;
+  border:1px solid rgba(217,164,65,.4);background:rgba(217,164,65,.08);
+  font-family:var(--font-d);font-weight:700;font-size:1.1rem;color:var(--red);letter-spacing:.02em;
+  margin-bottom:18px}
+.bcard h3{font-family:var(--font-d);font-weight:700;font-size:1.1rem;margin:0 0 6px;letter-spacing:-.01em}
+.bcard p{font-size:.84rem;margin:0;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
+.page-about .about__grid{align-items:start}
+@media (max-width:1100px){.bgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.bgrid{grid-template-columns:1fr}}
