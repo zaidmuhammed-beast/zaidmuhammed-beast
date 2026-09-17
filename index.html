@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#08090c" />
-<title>ABS Developers — Pakistan's Shariah-Compliant Real Estate Developer</title>
-<meta name="description" content="ABS Developers — Pakistan's first 100% Shariah-compliant real estate developer. Landmark residential, commercial and mixed-use towers across Lahore, Islamabad and Karachi." />
+<meta name="theme-color" content="#121212" />
+<title>Pakistan's Leading Real Estate Developer | ABS Developers</title>
+<meta name="description" content="ABS Developers is Pakistan's leading Shariah-compliant real estate developer, delivering premium properties, transparent investments and world-class construction." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="src/css/style.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090a0d'/%3E%3Cpath d='M16 4 L26 28 H6 Z' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121212'/%3E%3Cpath d='M16 5 L27 27 H5 Z' fill='none' stroke='%23bc3030' stroke-width='2.5'/%3E%3C/svg%3E" />
 <script type="importmap">
 {
   "imports": {
@@ -33,45 +33,29 @@
   </div>
 </div>
 
-<!-- ============ CURSOR / PROGRESS ============ -->
 <div class="cursor" id="cursor"><span class="cursor__dot"></span><span class="cursor__ring"></span><span class="cursor__label"></span></div>
 <div class="scroll-progress"><i id="scrollBar"></i></div>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
-  <a class="nav__brand" href="#home" data-cursor="ABS">
-    <svg class="nav__logo" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,5 34,34 6,34"/><polygon class="o" points="20,14 27,29 13,29"/></svg>
+  <a class="nav__brand" href="#home" data-cursor="Home">
+    <svg class="nav__logo" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,5 34,34 6,34"/><polygon class="o" points="20,15 27,29 13,29"/></svg>
     <span class="nav__brand-text">ABS<em>Developers</em></span>
   </a>
-  <nav class="nav__links" id="navLinks">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#shariah">Shariah</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="btn btn--sm nav__cta" href="#contact" data-cursor="Talk">Book a Consultation</a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary"></nav>
+  <a class="btn btn--sm nav__cta" href="#interest" data-cursor="Talk">Contact Us</a>
   <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
 </header>
 
 <div class="menu" id="menu">
   <div class="menu__bg"></div>
   <div class="menu__grid">
-    <ul class="menu__list">
-      <li><a href="#home"><b>01</b>Home</a></li>
-      <li><a href="#about"><b>02</b>About</a></li>
-      <li><a href="#services"><b>03</b>Services</a></li>
-      <li><a href="#projects"><b>04</b>Projects</a></li>
-      <li><a href="#shariah"><b>05</b>Shariah</a></li>
-      <li><a href="#process"><b>06</b>Process</a></li>
-      <li><a href="#contact"><b>07</b>Contact</a></li>
-    </ul>
+    <ul class="menu__list" id="menuList"></ul>
     <div class="menu__meta">
       <p class="menu__label">Head Office</p>
-      <p>Ground Floor, Pearl One Tower,<br/>10A–18A Iqbal Block, Bahria Town,<br/>Lahore, Punjab 53720</p>
+      <p id="menuAddress"></p>
       <p class="menu__label">Enquiries</p>
-      <p><a href="tel:+923200000022">+92 320 0000 022</a><br/><a href="mailto:info@abs-developers.com">info@abs-developers.com</a></p>
+      <p><a id="menuPhone" href="#"></a><br/><a id="menuEmail" href="#"></a></p>
     </div>
   </div>
 </div>
@@ -83,51 +67,28 @@
   <canvas id="cityCanvas" class="hero__canvas"></canvas>
   <div class="hero__veil"></div>
   <div class="hero__inner">
-    <p class="hero__eyebrow reveal-line"><i></i>Pakistan&rsquo;s first 100% Shariah-compliant developer</p>
-    <h1 class="hero__title">
-      <span class="line"><span>Building</span></span>
-      <span class="line"><span>the skyline of</span></span>
-      <span class="line"><span class="grad">tomorrow.</span></span>
-    </h1>
-    <p class="hero__sub reveal-line">Landmark residential, commercial and mixed-use developments across Lahore, Islamabad and Karachi — delivered on time, with zero interest and zero hidden charges.</p>
-    <div class="hero__actions reveal-line">
-      <a class="btn" href="#projects" data-cursor="View">Explore Projects<i class="btn__arrow">→</i></a>
-      <a class="btn btn--ghost" href="#shariah" data-cursor="Why">Why Shariah-compliant</a>
-    </div>
+    <p class="hero__eyebrow reveal-line"><i></i><span id="heroEyebrow"></span></p>
+    <p class="hero__lead reveal-line" id="heroLead"></p>
+    <h1 class="hero__title" id="heroTitle"></h1>
+    <p class="hero__sub reveal-line" id="heroSub"></p>
+    <div class="hero__actions reveal-line" id="heroActions"></div>
   </div>
-  <div class="hero__stats" id="heroStats"></div>
   <div class="hero__scroll"><span>Scroll</span><i></i></div>
 </section>
 
-<!-- ============ MARQUEE ============ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track" id="marqueeTrack"></div>
-</div>
+<div class="marquee" aria-hidden="true"><div class="marquee__track" id="marqueeTrack"></div></div>
 
-<!-- ============ ABOUT ============ -->
-<section class="section about" id="about">
-  <div class="wrap about__grid">
-    <div class="about__left">
-      <p class="tag reveal">/ 01 — About ABS</p>
-      <h2 class="h2 split">Nine years of turning plots into landmarks.</h2>
-      <p class="lede reveal">ABS Developers is a Lahore-headquartered real estate developer that builds high-rise residential, commercial and mixed-use destinations — and finances every one of them without interest.</p>
-      <p class="reveal">From <b>Pearl One Tower</b>, completed and handed over in under twenty months, to <b>Burj Quaid</b> in DHA City Karachi, the approach has stayed the same: pre-plan the whole build, self-finance the construction phase, and give possession when the brochure said we would.</p>
-      <div class="about__points">
-        <div class="point reveal"><b>16+</b><span>Projects delivered across Punjab, the capital and Sindh.</span></div>
-        <div class="point reveal"><b>0%</b><span>Interest on every payment plan — no riba, ever.</span></div>
-        <div class="point reveal"><b>2014</b><span>Founded in Lahore, now building nationwide.</span></div>
+<!-- ============ PROJECTS ============ -->
+<section class="section projects" id="projects">
+  <div class="wrap">
+    <header class="sec-head sec-head--row">
+      <div>
+        <p class="tag reveal">Our Projects</p>
+        <h2 class="h2 split">Landmarks in progress.</h2>
       </div>
-    </div>
-    <aside class="about__right">
-      <div class="panel reveal">
-        <div class="panel__row"><span>Headquarters</span><b>Lahore, Punjab</b></div>
-        <div class="panel__row"><span>Team</span><b>200+ professionals</b></div>
-        <div class="panel__row"><span>Cities</span><b>Lahore · Islamabad · Karachi · Sialkot</b></div>
-        <div class="panel__row"><span>Compliance</span><b>100% Shariah</b></div>
-        <div class="panel__row"><span>Chairman</span><b>Dr. Subbayal Ikram</b></div>
-      </div>
-      <div class="about__badge reveal"><canvas id="emblemCanvas"></canvas></div>
-    </aside>
+      <div class="filters" id="filters" role="group" aria-label="Filter projects by city"></div>
+    </header>
+    <div class="grid" id="projectGrid"></div>
   </div>
 </section>
 
@@ -136,103 +97,144 @@
   <div class="wrap stats__grid" id="statsGrid"></div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="section services" id="services">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="tag reveal">/ 02 — What we do</p>
-      <h2 class="h2 split">A developer, a builder and an investment partner.</h2>
-    </header>
-    <div class="services__list" id="servicesList"></div>
-  </div>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section class="section projects" id="projects">
-  <div class="wrap">
-    <header class="sec-head sec-head--row">
-      <div>
-        <p class="tag reveal">/ 03 — Portfolio</p>
-        <h2 class="h2 split">Signature developments.</h2>
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="wrap about__grid">
+    <div class="about__left">
+      <p class="tag reveal">About Us</p>
+      <h2 class="h2 split">Expertise, in house.</h2>
+      <p class="lede reveal">ABS Developers builds high-rise residential, commercial and mixed-use destinations across Pakistan — and structures every one of them without interest.</p>
+      <p class="reveal">From chairman and CEO to managing directors and engineers, the company runs on its own people: architecture, structural engineering, construction, sales and client service all sit under one roof. That is what makes a pre-planned build and an on-time possession possible.</p>
+      <div class="about__points">
+        <div class="point reveal"><b>941 ft</b><span>Burj Quaid — Pakistan’s tallest tower, DHA City Karachi.</span></div>
+        <div class="point reveal"><b>45</b><span>Storeys at Pearl One Courtyard 2 — Punjab’s tallest tower.</span></div>
+        <div class="point reveal"><b>0%</b><span>Interest on every payment plan, across every project.</span></div>
       </div>
-      <p class="sec-head__note reveal">Drag, scroll or swipe through the portfolio →</p>
-    </header>
+    </div>
+    <aside class="about__right">
+      <div class="panel reveal" id="aboutPanel"></div>
+      <div class="about__badge reveal"><canvas id="emblemCanvas"></canvas></div>
+    </aside>
   </div>
-  <div class="rail" id="rail">
-    <div class="rail__track" id="railTrack"></div>
-  </div>
-  <div class="wrap"><div class="rail__bar"><i id="railBar"></i></div></div>
 </section>
 
 <!-- ============ SHARIAH ============ -->
 <section class="section shariah" id="shariah">
-  <div class="shariah__bg"></div>
   <div class="wrap shariah__grid">
     <div>
-      <p class="tag reveal">/ 04 — The ABS difference</p>
-      <h2 class="h2 split">Ethical by construction, not by marketing.</h2>
-      <p class="lede reveal">Every plan is structured so your money never touches interest. No riba on instalments, no penalty interest on delays, no hidden charges layered in at possession.</p>
+      <p class="tag reveal">Shariah Compliant</p>
+      <h2 class="h2 split">Ethical by construction.</h2>
+      <p class="lede reveal">Every plan is structured so your money never touches interest — no riba on instalments, no penalty interest on delays, no charges appearing at possession.</p>
       <div class="pillars" id="pillars"></div>
     </div>
-    <div class="shariah__art"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="shariah__core"><span>100%</span><em>Shariah compliant</em></div></div>
+    <div class="shariah__art">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="shariah__core"><span>100%</span><em>Shariah Compliant</em></div>
+    </div>
   </div>
 </section>
 
-<!-- ============ PROCESS ============ -->
-<section class="section process" id="process">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="tag reveal">/ 05 — How a project happens</p>
-      <h2 class="h2 split">Pre-planned, then built.</h2>
-    </header>
-    <ol class="steps" id="steps"></ol>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="section contact" id="contact">
-  <div class="wrap contact__grid">
-    <div class="contact__left">
-      <p class="tag reveal">/ 06 — Let&rsquo;s talk</p>
-      <h2 class="h2 split">Book a consultation.</h2>
-      <p class="lede reveal">Tell us which project you&rsquo;re interested in and our investment desk will walk you through availability, payment plans and possession timelines.</p>
+<!-- ============ REGISTER INTEREST ============ -->
+<section class="section interest" id="interest">
+  <div class="wrap interest__grid">
+    <div class="interest__left">
+      <p class="tag reveal">Register Your Interest</p>
+      <h2 class="h2 split">Talk to the sales team.</h2>
+      <p class="lede reveal">Complete the form and our team will come back with full project information — availability, payment plans and possession timelines.</p>
       <ul class="contact__info">
-        <li class="reveal"><span>Head Office</span><b>Ground Floor, Pearl One Tower, 10A–18A Iqbal Block, Bahria Town, Lahore, Punjab 53720, Pakistan</b></li>
-        <li class="reveal"><span>Phone</span><b><a href="tel:+923200000022">+92 320 0000 022</a> · <a href="tel:+923006666490">+92 300 6666 490</a></b></li>
-        <li class="reveal"><span>Email</span><b><a href="mailto:info@abs-developers.com">info@abs-developers.com</a></b></li>
+        <li class="reveal"><span>Head Office</span><b id="cAddress"></b></li>
+        <li class="reveal"><span>Phone</span><b><a id="cPhone" href="#"></a></b></li>
+        <li class="reveal"><span>Email</span><b><a id="cEmail" href="#"></a></b></li>
       </ul>
     </div>
     <form class="form reveal" id="form" novalidate>
       <div class="field"><input id="fName" name="name" required placeholder=" " autocomplete="name" /><label for="fName">Full name</label></div>
-      <div class="field"><input id="fPhone" name="phone" required placeholder=" " autocomplete="tel" /><label for="fPhone">Phone</label></div>
+      <div class="form__row">
+        <div class="field field--code">
+          <select id="fCode" name="code" aria-label="Country code"></select>
+          <label for="fCode" class="label--static">Code</label>
+        </div>
+        <div class="field"><input id="fPhone" name="phone" required placeholder=" " inputmode="tel" autocomplete="tel" /><label for="fPhone">Phone number</label></div>
+      </div>
       <div class="field"><input id="fEmail" type="email" name="email" required placeholder=" " autocomplete="email" /><label for="fEmail">Email</label></div>
       <div class="field"><select id="fProject" name="project"></select><label for="fProject" class="label--static">Project of interest</label></div>
       <div class="field"><textarea id="fMsg" name="message" rows="3" placeholder=" "></textarea><label for="fMsg">Message</label></div>
-      <button class="btn btn--full" type="submit" data-cursor="Send">Send enquiry<i class="btn__arrow">→</i></button>
+      <button class="btn btn--full" type="submit" data-cursor="Send">Submit<i class="btn__arrow">→</i></button>
       <p class="form__note" id="formNote" role="status"></p>
     </form>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE OUR VISION ============ -->
+<section class="section vision" id="vision">
+  <div class="wrap">
+    <header class="sec-head sec-head--center">
+      <h2 class="h2 split" id="visionTitle"></h2>
+      <p class="lede reveal" id="visionSub"></p>
+    </header>
+    <div class="vision__grid" id="visionGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WHERE VISION MEETS VALUE ============ -->
+<section class="section value" id="value">
+  <div class="wrap value__inner">
+    <span class="value__badge reveal" id="valueBadge"></span>
+    <h2 class="h2 split" id="valueTitle"></h2>
+    <p class="lede reveal" id="valueText"></p>
+    <ul class="value__points" id="valuePoints"></ul>
+    <div class="value__actions reveal">
+      <a class="btn" href="#interest" data-cursor="Book">Schedule a 1-1 Meeting<i class="btn__arrow">→</i></a>
+      <a class="btn btn--ghost" href="#projects" data-cursor="View">Explore Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAREERS ============ -->
+<section class="section careers" id="careers">
+  <div class="wrap careers__grid">
+    <div>
+      <p class="tag reveal">Careers</p>
+      <h2 class="h2 split" id="careersTitle"></h2>
+      <p class="lede reveal" id="careersText"></p>
+      <a class="btn btn--ghost reveal" href="#interest" data-cursor="Apply">Get in touch<i class="btn__arrow">→</i></a>
+    </div>
+    <ul class="roles" id="roles"></ul>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section class="section blog" id="blog">
+  <div class="wrap">
+    <header class="sec-head sec-head--row">
+      <div>
+        <p class="tag reveal">Blog</p>
+        <h2 class="h2 split">News &amp; market insight.</h2>
+      </div>
+    </header>
+    <div class="posts" id="posts"></div>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="wrap footer__top">
-    <h2 class="footer__mark">ABS<em>DEVELOPERS</em></h2>
-    <div class="footer__cols">
-      <div><p class="menu__label">Projects</p><ul id="footerProjects"></ul></div>
-      <div><p class="menu__label">Company</p><ul>
-        <li><a href="#about">About</a></li><li><a href="#services">Services</a></li>
-        <li><a href="#shariah">Shariah compliance</a></li><li><a href="#process">Process</a></li>
-        <li><a href="#contact">Contact</a></li></ul></div>
-      <div><p class="menu__label">Follow</p><ul>
-        <li><a href="https://www.facebook.com/absdevelopers/" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="https://pk.linkedin.com/company/absdevelopers" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="mailto:info@abs-developers.com">Email</a></li></ul></div>
+    <div class="footer__brand">
+      <h2 class="footer__mark">ABS<em>DEVELOPERS</em></h2>
+      <p id="footerBlurb"></p>
+    </div>
+    <div class="footer__cols" id="footerCols"></div>
+    <div class="footer__contact">
+      <p class="menu__label">Contact Info</p>
+      <p id="fAddress"></p>
+      <p><a id="fPhoneLink" href="#"></a></p>
+      <p><a id="fEmailLink" href="#"></a></p>
+      <p><span id="fSite"></span></p>
     </div>
   </div>
   <div class="wrap footer__bottom">
     <p>© <span id="year"></span> ABS Developers (Pvt.) Ltd. All rights reserved.</p>
-    <p class="footer__note">Independent concept build — original design, public company information.</p>
+    <p class="footer__note">Concept build — original design and visuals, public company information.</p>
   </div>
 </footer>
 

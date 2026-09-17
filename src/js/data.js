@@ -1,178 +1,192 @@
 /**
- * Public, factual information about ABS Developers (Pvt.) Ltd.
- * Sourced from the company's public profiles and press coverage.
- * All descriptive copy here is written for this build.
+ * Content for the ABS Developers build.
+ * Structure, project specifications and contact details mirror the company's
+ * own homepage; descriptive copy here is written for this build.
  */
 
 export const company = {
-  name: 'ABS Developers (Pvt.) Ltd.',
-  founded: 2014,
-  hq: 'Lahore, Punjab, Pakistan',
-  chairman: 'Dr. Subbayal Ikram',
-  address: 'Ground Floor, Pearl One Tower, 10A–18A Iqbal Block, Bahria Town, Lahore, Punjab 53720, Pakistan',
-  phones: ['+92 320 0000 022', '+92 300 6666 490'],
+  name: 'ABS Developers',
+  legal: 'ABS Developers (Pvt.) Ltd.',
+  blurb: 'A pioneer in Shariah-compliant real estate, building tomorrow’s skylines with uncompromising quality.',
+  address: 'Ground Floor, Pearl One Tower, Iqbal Block, Bahria Town, Lahore',
+  phone: '03-222-333-332',
+  phoneHref: '+923222333332',
   email: 'info@abs-developers.com',
-  social: {
-    facebook: 'https://www.facebook.com/absdevelopers/',
-    linkedin: 'https://pk.linkedin.com/company/absdevelopers'
+  site: 'abs-developers.com'
+};
+
+/* primary navigation, matching the live site */
+export const nav = [
+  { label: 'Home', href: '#home' },
+  { label: 'Our Projects', href: '#projects' },
+  { label: 'Careers', href: '#careers' },
+  { label: 'About Us', href: '#about' },
+  { label: 'Shariah Compliant', href: '#shariah' },
+  { label: 'Blog', href: '#blog' }
+];
+
+export const footerLinks = {
+  'Quick Links': [
+    ['Home', '#home'], ['Our Projects', '#projects'], ['Careers', '#careers'],
+    ['About Us', '#about'], ['Shariah Compliant', '#shariah'], ['Contact Us', '#interest']
+  ],
+  Resources: [
+    ['Search', '#projects'], ['Our Team', '#about'], ['Blog', '#blog']
+  ]
+};
+
+export const hero = {
+  eyebrow: 'Welcome',
+  lead: 'To ABS Developers',
+  title: ['Pakistan’s leading', 'real estate', 'developer.'],
+  sub: 'Premium properties, transparent investment and world-class construction — delivered across Lahore, Islamabad, Karachi and Sialkot.',
+  ctas: [
+    { label: 'Schedule a 1-1 Meeting', href: '#interest', primary: true },
+    { label: 'Explore Projects', href: '#projects' }
+  ]
+};
+
+export const marquee = [
+  'Burj Quaid', 'Pearl One Courtyard', 'ABS Central', 'Pearl One Capital',
+  'ABS Mall & Residency', 'Sialkot Central', 'Pearl One Royal', '100% Shariah Compliant'
+];
+
+/* Status badges follow the live site: FLAGSHIP / AVAILABLE / POSSESSION READY / DELIVERED */
+export const projects = [
+  {
+    id: 'burj-quaid', name: 'Burj Quaid', badge: 'FLAGSHIP',
+    stats: [['941', 'ft Height'], ['82', 'Storeys']],
+    city: 'Karachi', location: 'DHA City Karachi',
+    note: 'Pakistan’s tallest tower — a supertall landmark rising 941 feet over DHA City Karachi.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 1
+  },
+  {
+    id: 'abs-executive', name: 'ABS Executive', badge: 'AVAILABLE',
+    stats: [['23', 'Storeys']],
+    city: 'Lahore', location: 'Opposite DHA Phase 5, Ring Road Interchange',
+    note: 'A ground-plus-23 storey address on the Ring Road interchange, facing DHA Phase 5.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 2
+  },
+  {
+    id: 'abs-central', name: 'ABS Central', badge: 'AVAILABLE',
+    stats: [['23', 'Storeys']],
+    city: 'Lahore', location: 'Ring Road Interchange, Bahria Town Lahore',
+    note: 'Twenty-three storeys of apartments and commercial floors at the Bahria Town interchange.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 3
+  },
+  {
+    id: 'poc-1', name: 'Pearl One Courtyard 1', badge: 'AVAILABLE',
+    stats: [['23', 'Storeys']],
+    city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
+    note: 'The first tower of the Courtyard trio, on a prime Bahria Town plot.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 4
+  },
+  {
+    id: 'poc-2', name: 'Pearl One Courtyard 2', badge: 'AVAILABLE',
+    stats: [['300+', 'ft Height'], ['45', 'Storeys']],
+    city: 'Lahore', location: 'Bahria Town Lahore',
+    note: 'Punjab’s tallest tower — forty-five storeys, with duplex penthouses at the crown.',
+    tags: ['University of Lahore', 'Luxury Apartments', 'Duplex Penthouses'], accent: '#bc3030', seed: 5
+  },
+  {
+    id: 'poc-3', name: 'Pearl One Courtyard 3', badge: 'AVAILABLE',
+    stats: [['31', 'Storeys']],
+    city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
+    note: 'Thirty-one storeys completing the Courtyard cluster.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 6
+  },
+  {
+    id: 'pearl-one-premium', name: 'Pearl One Premium', badge: 'AVAILABLE',
+    stats: [['23', 'Storeys']],
+    city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
+    note: 'Residences and a dedicated retail podium across twenty-three storeys.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 7
+  },
+  {
+    id: 'pearl-one-capital', name: 'Pearl One Capital', badge: 'AVAILABLE',
+    stats: [['300+', 'ft Height'], ['23', 'Storeys']],
+    city: 'Islamabad', location: 'DHA Phase 2, Islamabad',
+    note: 'The company’s capital-city address, rising over 300 feet in DHA Phase 2.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 8
+  },
+  {
+    id: 'sialkot-central', name: 'Sialkot Central', badge: 'AVAILABLE',
+    stats: [['23', 'Floors']],
+    city: 'Sialkot', location: 'Prime location, Sialkot',
+    note: 'Twenty-three floors bringing the Central format to Sialkot.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 9
+  },
+  {
+    id: 'pearl-one-royal', name: 'Pearl One Royal', badge: 'AVAILABLE',
+    stats: [['23', 'Storeys']],
+    city: 'Lahore', location: 'Bahria Orchard Phase 2',
+    note: 'A twenty-three storey residential and commercial tower in Bahria Orchard.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 10
+  },
+  {
+    id: 'mall-residency-2', name: 'ABS Mall & Residency 2', badge: 'AVAILABLE',
+    stats: [['15', 'Storeys']],
+    city: 'Lahore', location: 'Ring Road Interchange, Bahria Town Lahore',
+    note: 'The second Mall & Residency block — fifteen storeys over retail.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#bc3030', seed: 11
+  },
+  {
+    id: 'mall-residency-1', name: 'ABS Mall & Residency 1', badge: 'POSSESSION READY',
+    stats: [['9', 'Storeys']],
+    city: 'Lahore', location: 'Ring Road Interchange, Bahria Town Lahore',
+    note: 'Nine storeys of homes above a working mall — keys in hand.',
+    tags: ['Commercial Spaces', 'Luxury Apartments'], accent: '#1f8a52', seed: 12
+  },
+  {
+    id: 'pearl-one-tower', name: 'Pearl One Tower', badge: 'DELIVERED',
+    stats: [['7', 'Storeys']],
+    city: 'Lahore', location: 'Prime location, Bahria Town Lahore',
+    note: 'Completed, handed over, and now home to the ABS head office.',
+    tags: ['Mixed-Use', 'Retail Spaces', 'Community Hub'], accent: '#1f8a52', seed: 13
   }
+];
+
+/* "Experience Our Vision" — the live site runs walkthrough films here */
+export const vision = {
+  title: 'Experience Our Vision',
+  sub: 'Take a virtual tour of our latest developments and architectural excellence.',
+  items: [
+    { name: 'Pearl One Courtyard', sub: 'Flagship luxury residential development', len: '0:55', seed: 5 },
+    { name: 'Burj Quaid', sub: 'Pakistan’s tallest tower, DHA City Karachi', len: '1:20', seed: 1 },
+    { name: 'ABS Mall & Residency', sub: 'Retail and residences, Bahria Town Lahore', len: '0:48', seed: 12 },
+    { name: 'Pearl One Capital', sub: 'DHA Phase 2, Islamabad', len: '1:05', seed: 8 }
+  ]
+};
+
+export const value = {
+  badge: '100% Shariah Compliant',
+  title: 'Where Vision Meets Value.',
+  text: 'Iconic residential, commercial and mixed-use developments built to create lasting value for investors and modern lifestyles for families — every one of them quality-led, transparent and fully Shariah-compliant.',
+  points: ['Free Consultation', 'Prime Locations', 'Guaranteed ROI']
 };
 
 export const stats = [
-  { value: 16, suffix: '+', label: 'Projects delivered', note: 'Residential, commercial and mixed-use' },
-  { value: 9,  suffix: '+', label: 'Years of building', note: 'Founded in Lahore, 2014' },
-  { value: 200, suffix: '+', label: 'Team members', note: 'Design, engineering and sales' },
-  { value: 0,  suffix: '%', label: 'Interest charged', note: 'Every plan, every project' }
-];
-
-export const heroStats = [
-  { k: '16+', v: 'Projects delivered' },
-  { k: '4', v: 'Cities' },
-  { k: '0%', v: 'Riba' }
-];
-
-export const marquee = [
-  'Burj Quaid', 'Pearl One Capital', 'Pearl One Courtyard', 'Pearl One Premium',
-  'ABS Mall & Residency', 'ABS Central', 'Pearl One Tower', '100% Shariah compliant'
-];
-
-export const services = [
-  {
-    n: '01',
-    title: 'High-rise residential',
-    text: 'Apartment towers from compact one-bed homes to double-storey penthouses, planned around daylight, service cores and real family layouts.',
-    tags: ['Apartments', 'Penthouses', 'Sky lounges']
-  },
-  {
-    n: '02',
-    title: 'Commercial & retail',
-    text: 'Shopping malls, retail outlets, IT zones and corporate floors built as part of the tower rather than bolted on beneath it.',
-    tags: ['Malls', 'Outlets', 'Corporate floors']
-  },
-  {
-    n: '03',
-    title: 'Mixed-use destinations',
-    text: 'Developments that stack a mall, offices and residences into a single address, so residents live above everything they need.',
-    tags: ['Mall + residency', 'Mixed-use', 'Master planning']
-  },
-  {
-    n: '04',
-    title: 'Shariah-compliant investment',
-    text: 'Instalment plans structured with no interest, no penalty riba and no hidden charges at possession — reviewed for compliance end to end.',
-    tags: ['0% interest', 'No hidden charges', 'Transparent']
-  },
-  {
-    n: '05',
-    title: 'Construction & delivery',
-    text: 'Projects are fully pre-planned before the first pour, then self-financed through construction so timelines survive the market.',
-    tags: ['Pre-planned', 'In-house build', 'On-time possession']
-  },
-  {
-    n: '06',
-    title: 'Aftercare & management',
-    text: 'Handover support, facility management and resale guidance for owners long after the possession letter is signed.',
-    tags: ['Handover', 'Facilities', 'Resale']
-  }
-];
-
-export const projects = [
-  {
-    id: 'burj-quaid',
-    name: 'Burj Quaid',
-    city: 'Karachi',
-    location: 'DHA City Karachi',
-    status: 'Under development',
-    scale: 'Supertall mixed-use',
-    accent: '#d9a441',
-    text: 'The company’s most ambitious build: a supertall mixed-use landmark planned for DHA City Karachi with luxury apartments, sky-high penthouses, premium offices, hospitality and an observation level.',
-    facts: [['Use', 'Residential · Office · Hotel'], ['Homes', '1, 2 & 3 bed + penthouses'], ['Landmark', 'Observation deck']],
-    seed: 1
-  },
-  {
-    id: 'pearl-one-capital',
-    name: 'Pearl One Capital',
-    city: 'Islamabad',
-    location: 'DHA Islamabad',
-    status: 'Launching',
-    scale: 'Luxury residential & retail',
-    accent: '#c9b27a',
-    text: 'ABS Developers’ entry into the capital — a luxury residential and retail address in DHA Islamabad planned around a stack of more than a hundred on-site amenities.',
-    facts: [['Use', 'Residential · Retail'], ['Amenities', '100+ planned'], ['Market', 'DHA Islamabad']],
-    seed: 2
-  },
-  {
-    id: 'pearl-one-courtyard',
-    name: 'Pearl One Courtyard',
-    city: 'Lahore',
-    location: 'Main Boulevard, Tipu Sultan Block, Bahria Town',
-    status: 'Under construction',
-    scale: 'G+25 mixed-use',
-    accent: '#e0b356',
-    text: 'A ground-plus-twenty-five storey mixed-use tower on Bahria Town’s main boulevard: a five-level shopping mall, 200+ commercial units, apartments above and double-storey penthouses at the crown.',
-    facts: [['Height', 'G + 25 storeys'], ['Commercial', '200+ units'], ['Extras', 'Helipad · Rooftop garden']],
-    seed: 3
-  },
-  {
-    id: 'pearl-one-premium',
-    name: 'Pearl One Premium',
-    city: 'Lahore',
-    location: 'Takbeer Block, Bahria Town',
-    status: 'Under construction',
-    scale: 'G+25 residential & mall',
-    accent: '#cfa14a',
-    text: 'Built on the old food-court cinema site in Takbeer Block: twenty-five storeys of residences and penthouses over a dedicated shopping mall, with more than three hundred homes in the stack.',
-    facts: [['Height', 'G + 25 storeys'], ['Homes', '300+ residences'], ['Retail', 'Dedicated mall']],
-    seed: 4
-  },
-  {
-    id: 'abs-mall-residency',
-    name: 'ABS Mall & Residency',
-    city: 'Lahore',
-    location: 'Main entrance, Bahria Town',
-    status: 'Delivered',
-    scale: 'Mall + residences',
-    accent: '#bfa06a',
-    text: 'A mall-and-residency landmark at the main entrance of Bahria Town Lahore, pairing apartments and penthouses with retail floors and more than twenty on-site facilities.',
-    facts: [['Use', 'Retail · Residential'], ['Facilities', '21+'], ['Position', 'Bahria Town gateway']],
-    seed: 5
-  },
-  {
-    id: 'abs-central',
-    name: 'ABS Central',
-    city: 'Lahore',
-    location: 'Ring Road Interchange',
-    status: 'Under construction',
-    scale: 'High-rise mixed-use',
-    accent: '#d7ad5f',
-    text: 'A high-rise concept at the Ring Road interchange: premium apartments over commercial shops, served by high-speed lifts, secure parking and smart building security.',
-    facts: [['Use', 'Apartments · Shops'], ['Access', 'Ring Road interchange'], ['Systems', 'Smart security']],
-    seed: 6
-  },
-  {
-    id: 'pearl-one-tower',
-    name: 'Pearl One Tower',
-    city: 'Lahore',
-    location: 'Iqbal Block, Bahria Town',
-    status: 'Delivered',
-    scale: 'Residential & commercial',
-    accent: '#b9944c',
-    text: 'The project that set the standard: a residential and commercial tower completed in under twenty months with possession handed to buyers on schedule. It now houses the company’s head office.',
-    facts: [['Delivery', 'Under 20 months'], ['Use', 'Shops · Apartments'], ['Status', 'Handed over']],
-    seed: 7
-  }
+  { value: 13, suffix: '+', label: 'Landmark projects', note: 'Delivered and under development' },
+  { value: 941, suffix: ' ft', label: 'Tallest tower', note: 'Burj Quaid, DHA City Karachi' },
+  { value: 4, suffix: '', label: 'Cities', note: 'Lahore · Islamabad · Karachi · Sialkot' },
+  { value: 100, suffix: '%', label: 'Shariah compliant', note: 'No riba, no hidden charges' }
 ];
 
 export const pillars = [
-  { title: 'No riba on instalments', text: 'Payment plans are priced once. Spreading them over time never adds interest.' },
+  { title: 'No riba on instalments', text: 'Payment plans are priced once — spreading them over time never adds interest.' },
   { title: 'No hidden charges', text: 'What is quoted at booking is what is settled at possession.' },
-  { title: 'Self-financed builds', text: 'Construction is funded through the project, not through interest-bearing debt.' },
-  { title: 'Documented compliance', text: 'Structures are reviewed so the whole chain — not just the brochure — stays compliant.' }
+  { title: 'Transparent investment', text: 'Project status, timelines and payment structure are on the table from day one.' },
+  { title: 'Documented compliance', text: 'Structures are reviewed so the whole chain stays compliant, not just the brochure.' }
 ];
 
-export const steps = [
-  { n: '01', title: 'Land & feasibility', text: 'Location, approvals and demand are tested before a single rupee is committed.' },
-  { n: '02', title: 'Full pre-planning', text: 'Architecture, MEP, structure and finishes are resolved before construction starts — not during it.' },
-  { n: '03', title: 'Compliant structuring', text: 'The payment plan is built interest-free from the start, then reviewed for Shariah compliance.' },
-  { n: '04', title: 'Construction', text: 'In-house teams build to the pre-planned programme, self-financed through the construction phase.' },
-  { n: '05', title: 'Possession', text: 'Handover on the promised date, with aftercare and facility management from day one.' }
+export const careers = {
+  title: 'Build your career with ABS',
+  text: 'From chairman and CEO to managing directors and engineers, ABS runs on in-house expertise across design, construction, sales and client service.',
+  roles: ['Civil & Structural Engineering', 'Architecture & Design', 'Sales & Investment Advisory', 'Project Management']
+};
+
+export const blog = [
+  { tag: 'Investment', title: 'Why investors choose Shariah-compliant developments', read: '4 min read' },
+  { tag: 'Projects', title: 'Inside Burj Quaid: building Pakistan’s tallest tower', read: '6 min read' },
+  { tag: 'Market', title: 'What on-time possession actually requires', read: '5 min read' }
 ];

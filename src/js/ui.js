@@ -162,50 +162,6 @@ export function initTilt(selector = '.card') {
   });
 }
 
-/* ---------------- horizontal rail ---------------- */
-export function initRail(railEl, barEl) {
-  if (!railEl) return;
-  let down = false, startX = 0, startScroll = 0, moved = 0;
-
-  railEl.addEventListener('pointerdown', (e) => {
-    down = true; moved = 0;
-    startX = e.clientX; startScroll = railEl.scrollLeft;
-    railEl.classList.add('is-dragging');
-    railEl.setPointerCapture?.(e.pointerId);
-  });
-  railEl.addEventListener('pointermove', (e) => {
-    if (!down) return;
-    const dx = e.clientX - startX;
-    moved = Math.abs(dx);
-    railEl.scrollLeft = startScroll - dx;
-  });
-  const end = () => { down = false; railEl.classList.remove('is-dragging'); };
-  railEl.addEventListener('pointerup', end);
-  railEl.addEventListener('pointercancel', end);
-  railEl.addEventListener('pointerleave', end);
-  railEl.addEventListener('click', (e) => { if (moved > 8) e.preventDefault(); }, true);
-
-  // vertical wheel → horizontal, but hand back at the ends so the page keeps scrolling
-  railEl.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
-    const max = railEl.scrollWidth - railEl.clientWidth;
-    const next = railEl.scrollLeft + e.deltaY;
-    if (next > 0 && next < max) { e.preventDefault(); railEl.scrollLeft = next; }
-  }, { passive: false });
-
-  const update = () => {
-    const max = railEl.scrollWidth - railEl.clientWidth || 1;
-    const p = clamp(railEl.scrollLeft / max, 0, 1);
-    if (barEl) {
-      const track = 1 - 0.12;
-      barEl.style.transform = `translateX(${(p * track * 100) / 0.12}%)`;
-    }
-  };
-  railEl.addEventListener('scroll', update, { passive: true });
-  addEventListener('resize', update);
-  update();
-}
-
 /* ---------------- nav + menu + progress ---------------- */
 export function initNav() {
   const nav = document.getElementById('nav');
@@ -286,19 +242,19 @@ export function initForm(company) {
     });
     if (!ok) { note.textContent = 'Please check the highlighted fields.'; return; }
 
-    // No backend in this build — hand the enquiry to the user's mail client.
-    const data = new FormData(form);
+    // No backend in this build — hand the enquiry to the visitor's mail client.
+    const d = new FormData(form);
     const body = [
-      `Name: ${data.get('name')}`,
-      `Phone: ${data.get('phone')}`,
-      `Email: ${data.get('email')}`,
-      `Project: ${data.get('project')}`,
+      `Name: ${d.get('name')}`,
+      `Phone: ${d.get('code') || ''} ${d.get('phone')}`.trim(),
+      `Email: ${d.get('email')}`,
+      `Project: ${d.get('project')}`,
       '',
-      data.get('message') || ''
+      d.get('message') || ''
     ].join('\n');
     note.textContent = 'Opening your mail app with this enquiry…';
     location.href = `mailto:${company.email}?subject=${encodeURIComponent(
-      `Enquiry — ${data.get('project')}`)}&body=${encodeURIComponent(body)}`;
+      `Enquiry — ${d.get('project')}`)}&body=${encodeURIComponent(body)}`;
     form.reset();
   });
 }
