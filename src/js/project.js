@@ -77,23 +77,58 @@ function renderHero() {
   page.specs.forEach(([v, l]) => specs.append(el('div', 'pspec', `<b>${v}</b><span>${l}</span>`)));
 
   const appr = $('#pApprovals');
-  (page.approvals || []).forEach((a) => appr.append(el('i', null, a)));
+  if (appr) (page.approvals || []).forEach((a) => appr.append(el('i', null, a)));
+  const market = $('#pMarket');
+  if (market && !page.marketedBy) market.remove();
 }
 
 /* ---------------- location ---------------- */
 function renderLocation() {
-  $('#travelTitle').textContent = page.travel.title;
   const grid = $('#travelGrid');
-  page.travel.items.forEach(([time, from]) => {
-    grid.append(el('div', 'tcard reveal', `<b>${time}</b><span>${from}</span>`));
+  if (grid && page.travel) {
+    $('#travelTitle').textContent = page.travel.title;
+    page.travel.items.forEach(([time, from]) => {
+      grid.append(el('div', 'tcard reveal', `<b>${time}</b><span>${from}</span>`));
+    });
+  }
+  if (page.location) {
+    const t = $('#locTitle'), x = $('#locText');
+    if (t) t.textContent = page.location.title;
+    if (x) x.textContent = page.location.text;
+  }
+}
+
+/* ---------------- residential + commercial mix ---------------- */
+function renderUnits() {
+  const rows = (host, items) => {
+    if (!host || !items) return;
+    items.forEach((u) => host.append(el('article', 'unit reveal', `
+      <div class="unit__head"><h3>${u.type}</h3><b>${u.size}</b></div>
+      <p>${u.note}</p>`)));
+  };
+  rows($('#unitList'), page.units);
+  rows($('#commercialList'), page.commercial);
+}
+
+/* ---------------- booking process ---------------- */
+function renderBooking() {
+  const host = $('#bookingSteps');
+  if (!host || !page.booking) return;
+  const b = page.booking;
+  const note = $('#bookingNote');
+  if (note) note.textContent = b.note || '';
+  b.steps.forEach((st, i) => host.append(el('li', 'bstep reveal', `
+    <b>${String(i + 1).padStart(2, '0')}</b><h3>${st.title}</h3><p>${st.text}</p>`)));
+  const cts = $('#bookingContacts');
+  if (cts) (b.contacts || []).forEach(([label, value, href]) => {
+    cts.append(el('li', 'reveal', `<span>${label}</span><b><a href="${href}">${value}</a></b>`));
   });
-  $('#locTitle').textContent = page.location.title;
-  $('#locText').textContent = page.location.text;
 }
 
 /* ---------------- galleries ---------------- */
 function renderGalleries() {
   const host = $('#galleryHost');
+  if (!host || !page.galleries) return;
   page.galleries.forEach((g, gi) => {
     const block = el('div', 'gblock');
     block.innerHTML = `
@@ -116,13 +151,14 @@ function renderGalleries() {
 /* ---------------- landmarks + amenities ---------------- */
 function renderFeatures() {
   const grid = $('#landmarkGrid');
-  page.landmarks.forEach(([title, text], i) => {
-    grid.append(el('article', 'lcard reveal',
-      `<b>${String(i + 1).padStart(2, '0')}</b><h3>${title}</h3><p>${text}</p>`));
-  });
-
+  if (grid && page.landmarks) {
+    page.landmarks.forEach(([title, text], i) => {
+      grid.append(el('article', 'lcard reveal',
+        `<b>${String(i + 1).padStart(2, '0')}</b><h3>${title}</h3><p>${text}</p>`));
+    });
+  }
   const list = $('#amenList');
-  page.amenities.forEach((a) => list.append(el('li', 'reveal', a)));
+  if (list && page.amenities) page.amenities.forEach((a) => list.append(el('li', 'reveal', a)));
 }
 
 /* ---------------- WebGL hero ---------------- */
@@ -158,13 +194,15 @@ function boot() {
   renderChrome();
   renderHero();
   renderLocation();
+  renderUnits();
+  renderBooking();
   renderGalleries();
   renderFeatures();
 
   initNav();
   initReveals();
   initCursor();
-  initTilt('.gtile, .lcard');
+  initTilt('.gtile, .lcard, .unit');
   initForm(data.company);
   initWebGL();
 

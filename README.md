@@ -34,10 +34,13 @@ The visual language is the dark architectural one from the first build — near-
 surfaces, a single gold accent, Syne over Inter — carrying the content and structure
 taken from the company's live pages.
 
-**Project pages.** `burj-quaid.html` is a full detail page driven by
-`projectPages` in `data.js` — hero specifications, approvals, travel times,
-galleries, nearby landmarks and the amenity list. Adding another project page is
-a new entry in that object plus a copy of the HTML shell with a different
+**Project pages.** `burj-quaid.html` and `pearl-one-capital.html` are detail
+pages driven by `projectPages` in `data.js` — hero specifications, approvals,
+travel times, residential and commercial unit mixes, the booking process,
+galleries, nearby landmarks and amenities. Every section renders only if the
+project defines it, so pages can differ: Burj Quaid carries travel times and
+landmarks, Pearl One Capital carries the unit tables and booking steps. Adding
+another is a new entry in that object plus an HTML shell with a different
 `data-project` value; `src/js/project.js` renders the rest.
 
 ## What's under it

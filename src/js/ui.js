@@ -48,7 +48,7 @@ addEventListener('resize', queueSweep);
 
 /* ---------------- reveals ---------------- */
 export function initReveals(root = document) {
-  const items = [...root.querySelectorAll('.reveal, .reveal-line, .split, .step, .hero__title')];
+  const items = [...root.querySelectorAll('.reveal, .reveal-line, .split, .step, .bstep, .hero__title, .phero__title')];
   if (reduced) { items.forEach(show); return; }
 
   items.forEach((el) => {

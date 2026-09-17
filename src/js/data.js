@@ -249,3 +249,63 @@ export const projectPages = {
     ]
   }
 };
+
+projectPages['pearl-one-capital'] = {
+  id: 'pearl-one-capital',
+  name: 'Pearl One Capital',
+  eyebrow: 'Pre-launching soon',
+  tagline: 'The capital address',
+  standfirst: 'Luxury apartments, smart shops and more than a hundred amenities, coming to DHA Islamabad.',
+  intro: 'Pearl One Capital brings the Pearl One format to the capital: over 300 residential units above a retail podium, with pre-launch registration now open.',
+  seed: 8,
+  accent: '#d9a441',
+  specs: [
+    ['300+', 'Residential units'],
+    ['100+', 'Amenities'],
+    ['DHA', 'Islamabad']
+  ],
+  approvals: ['Pre-launch registration open'],
+  location: {
+    title: 'DHA Phase 2, Islamabad',
+    text: 'A ground-plus-23 storey tower in DHA Islamabad, with apartment stock facing both the courtyard and the ring road.'
+  },
+  /* residential mix — sizes as published */
+  units: [
+    { type: '1-bed apartment', size: '500 sq ft', note: 'The entry residence: bedroom, living room, kitchen and washroom.' },
+    { type: '1-bed, ring road facing', size: '540 sq ft', note: 'The same layout on the ring-road elevation.' },
+    { type: '2-bed apartment', size: '800 sq ft', note: 'A larger plan with bedroom, living, kitchen and washroom.' },
+    { type: '3-bed luxury apartment', size: '1,600 sq ft', note: 'Three bedrooms and three bathrooms.' },
+    { type: '1-bed penthouse', size: '1,350 sq ft', note: 'Upper-level living with long views across the capital.' },
+    { type: '2-bed penthouse', size: '2,305 sq ft', note: 'The largest residence in the tower.' }
+  ],
+  commercial: [
+    { type: 'Ground floor mall retail', size: '170 sq ft', note: 'Modern outlets on the primary retail level.' },
+    { type: 'First floor retail & office', size: '150 sq ft', note: 'Suited to corporate and service businesses.' },
+    { type: 'Lower ground retail', size: '150 sq ft', note: 'A further run of outlets below the mall floor.' }
+  ],
+  amenities: [
+    'Infinity swimming pool', 'Children’s play areas', 'Landscaped parks', 'CCTV surveillance',
+    'Indoor gym', 'Terrace', 'BBQ & dining area', 'Courtyard', '24/7 room & grocery service',
+    'Private pools (select units)', 'Double-height private residential lobby', '6+ lifts',
+    'Fully automated complex', 'Library', 'Tennis court', 'High-speed elevators',
+    'Executive lounge', 'Sauna', 'Daycare', 'Bowling alley'
+  ],
+  booking: {
+    title: 'Booking process',
+    note: 'Expression of Interest deposit: PKR 500,000.',
+    steps: [
+      { title: 'Submit the EOI form', text: 'Applicant details, property preference and the PKR 500,000 deposit — online or at the ABS Developers office.' },
+      { title: 'Submit payment evidence', text: 'Pay by bank transfer, cheque or cash against the official account details, then send the receipt to the helpline or installments inbox.' },
+      { title: 'Down payment within 15 days', text: 'Complete the booking by paying the down payment within fifteen days of the EOI.' },
+      { title: 'Confirmation & documentation', text: 'Booking is confirmed and the final documentation is issued.' }
+    ],
+    contacts: [
+      ['WhatsApp helpline', '+92 3000 955 955', 'tel:+923000955955'],
+      ['Installments', 'installment@abs-developers.com', 'mailto:installment@abs-developers.com']
+    ]
+  },
+  galleries: [
+    { title: 'The tower', sub: 'Exterior and approach', tiles: 3 },
+    { title: 'Floor plans', sub: 'One bed · two bed · three bed · penthouse', tiles: 4 }
+  ]
+};
